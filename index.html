@@ -161,23 +161,71 @@
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/react-typescript/">React Typescript</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/git-aliases/">Алиасы в git</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 25 Jun 2018 </span>
+      <span class="post-time"> 4 Nov 2018 </span>
       <div class="post-category">
-          <a href="/categories/frontend/"> frontend </a>
+          <a href="/categories/tools/"> tools </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
-Стартовый шаблон Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
-Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.
+      В GIT есть очень удобная функциональность для создания кратких команд:
+1  git config --global alias.имя_алиаса команда   Например, очень удобная команда:
+1  git log --oneline --graph   Создающая вывод в терминале всего дерева коммитов Очень удобно сделать сокращение такой команды
+1  git l   для этого надо выполнить
+1  git config --global alias.l log --oneline --graph   или улучшенный вариант
+1  git config --global alias.
     </div>
     <div class="read-more">
-      <a href="/post/react-typescript/" class="read-more-link"></a>
+      <a href="/post/git-aliases/" class="read-more-link"></a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/dunai/">Dunai framework</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 3 Aug 2018 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
+Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.
+И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
+И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
+Конец.
+Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.
+    </div>
+    <div class="read-more">
+      <a href="/post/dunai/" class="read-more-link"></a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/python/">Шпаргалка по Python</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 30 Jul 2018 </span>
+      <div class="post-category">
+          <a href="/categories/python/"> python </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      На pythonworld.ru нашел отличную шпаргалку 
+    </div>
+    <div class="read-more">
+      <a href="/post/python/" class="read-more-link"></a>
     </div>
   </div>
 </article>
@@ -186,7 +234,10 @@
   
   <nav class="pagination">
     
-    
+    <a class="next" href="/page/2/">
+        <span class="next-text"></span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         

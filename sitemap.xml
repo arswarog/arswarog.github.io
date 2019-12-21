@@ -65,6 +65,55 @@
   </url>
   
   <url>
+    <loc>https://arswarog.ru/tags/git/</loc>
+    <lastmod>2018-11-04T22:00:12+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/categories/tools/</loc>
+    <lastmod>2018-11-04T22:00:12+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/git-aliases/</loc>
+    <lastmod>2018-11-04T22:00:12+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/dunai/</loc>
+    <lastmod>2018-08-03T22:13:13+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/categories/python/</loc>
+    <lastmod>2018-07-30T22:26:12+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/python/</loc>
+    <lastmod>2018-07-30T22:26:12+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/aha/</loc>
+    <lastmod>2018-06-25T22:19:25+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://arswarog.ru/tags/react/</loc>
     <lastmod>2018-06-25T19:57:11+03:00</lastmod>
     <changefreq>weekly</changefreq>

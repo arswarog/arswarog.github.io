@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Even - A super concise theme for Hugo</title>
+    <link>https://arswarog.ru/categories/tools/</link>
+    <description>Recent content in tools on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Sun, 04 Nov 2018 22:00:12 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Алиасы в git</title>
+      <link>https://arswarog.ru/post/git-aliases/</link>
+      <pubDate>Sun, 04 Nov 2018 22:00:12 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/git-aliases/</guid>
+      <description>В GIT есть очень удобная функциональность для создания кратких команд:
+1  git config --global alias.имя_алиаса команда   Например, очень удобная команда:
+1  git log --oneline --graph   Создающая вывод в терминале всего дерева коммитов Очень удобно сделать сокращение такой команды
+1  git l   для этого надо выполнить
+1  git config --global alias.l log --oneline --graph   или улучшенный вариант
+1  git config --global alias.</description>
+    </item>
+    
+    <item>
+      <title>Сохраняем цветной вывод консоли</title>
+      <link>https://arswarog.ru/post/aha/</link>
+      <pubDate>Mon, 25 Jun 2018 22:19:25 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/aha/</guid>
+      <description>Бывают случаи, когда требуется сохранить вывод приложения в консоли со всеми плюшками, такими как цвет текста, жирный шрифт и т.д. Для таких случаев есть интересная программа, написанная на Cи — aha, так же доступная в AUR ArchLinux
+Просто перенаправляем ей вывод программы Например, сохраним в html справку самой программы:
+1  $ aha -h | aha &amp;gt; out.html   Или настроим результат, добавим черный фон (--black) и включим использование таблицы стилей вместо inline стилей (-s)</description>
+    </item>
+    
+  </channel>
+</rss>
