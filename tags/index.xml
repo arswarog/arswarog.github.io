@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Even - A super concise theme for Hugo</title>
+    <link>https://arswarog.ru/tags/</link>
+    <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 05 Dec 2019 20:47:39 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>theory</title>
+      <link>https://arswarog.ru/tags/theory/</link>
+      <pubDate>Thu, 05 Dec 2019 20:47:39 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://arswarog.ru/tags/react/</link>
+      <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://arswarog.ru/tags/typescript/</link>
+      <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

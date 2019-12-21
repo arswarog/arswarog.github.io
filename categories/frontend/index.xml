@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>frontend on Even - A super concise theme for Hugo</title>
+    <link>https://arswarog.ru/categories/frontend/</link>
+    <description>Recent content in frontend on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 31 Jan 2019 21:04:55 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/categories/frontend/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Установка скрытой reCaptcha от Google</title>
+      <link>https://arswarog.ru/post/invisible-google-recaptcha/</link>
+      <pubDate>Thu, 31 Jan 2019 21:04:55 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/invisible-google-recaptcha/</guid>
+      <description>Google предоставляет замечательное средство для борьбы со спамом — reCaptcha
+Обычно это просто галочка «Я не робот»
+Однако есть возможность не делать даже этого — Invisible reCAPTCHA проверяет пользователя в фоне и только если возникли сомнения отображает окно с дополнительным подтверждением
+Подключить невидимую рекапчу очень просто:
+Создаем контейнер и подключаем скрипт
+1 2 3  &amp;lt;div id=&amp;#34;recaptcha&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;#34;https://www.google.com/recaptcha/api.js?onload=onloadReCaptchaInvisible&amp;amp;render=explicit&amp;#34; async defer&amp;gt;&amp;lt;/script&amp;gt;   Настраиваем и пару функций для удобной работы</description>
+    </item>
+    
+    <item>
+      <title>React Typescript</title>
+      <link>https://arswarog.ru/post/react-typescript/</link>
+      <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/react-typescript/</guid>
+      <description>Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
+Стартовый шаблон Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
+Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.</description>
+    </item>
+    
+  </channel>
+</rss>

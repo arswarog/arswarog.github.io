@@ -1,0 +1,88 @@
+<?xml-stylesheet type="text/xsl" href="https://arswarog.ru/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://arswarog.ru/categories/</loc>
+    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/</loc>
+    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/</loc>
+    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/</loc>
+    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/theory/</loc>
+    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/categories/theory/</loc>
+    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/patterns/</loc>
+    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/categories/frontend/</loc>
+    <lastmod>2019-01-31T21:04:55+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/invisible-google-recaptcha/</loc>
+    <lastmod>2019-01-31T21:04:55+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/react/</loc>
+    <lastmod>2018-06-25T19:57:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/react-typescript/</loc>
+    <lastmod>2018-06-25T19:57:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/typescript/</loc>
+    <lastmod>2018-06-25T19:57:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

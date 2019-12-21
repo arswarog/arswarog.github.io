@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>React Typescript - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Arswarog" /><meta name="description" content="Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
+Стартовый шаблон Для быстрого создания React &#43; TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
+Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="https://arswarog.ru/post/react-typescript/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="React Typescript" />
+<meta property="og:description" content="Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
+Стартовый шаблон Для быстрого создания React &#43; TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
+Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arswarog.ru/post/react-typescript/" />
+<meta property="article:published_time" content="2018-06-25T19:57:11+03:00" />
+<meta property="article:modified_time" content="2018-06-25T19:57:11+03:00" />
+<meta itemprop="name" content="React Typescript">
+<meta itemprop="description" content="Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
+Стартовый шаблон Для быстрого создания React &#43; TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
+Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.">
+<meta itemprop="datePublished" content="2018-06-25T19:57:11&#43;03:00" />
+<meta itemprop="dateModified" content="2018-06-25T19:57:11&#43;03:00" />
+<meta itemprop="wordCount" content="293">
+
+
+
+<meta itemprop="keywords" content="react,typescript," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React Typescript"/>
+<meta name="twitter:description" content="Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
+Стартовый шаблон Для быстрого создания React &#43; TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
+Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Arswarog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/tags/react">
+        <li class="mobile-menu-item">React</li>
+      </a><a href="/tags/typescript">
+        <li class="mobile-menu-item">TypeScript</li>
+      </a><a href="/tags/theory">
+        <li class="mobile-menu-item">Теория</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Архив</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Arswarog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/tags/react">React</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/typescript">TypeScript</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/theory">Теория</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Архив</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">React Typescript</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 25 Jun 2018 </span>
+        <div class="post-category">
+            <a href="/categories/frontend/"> frontend </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-react---typescript">Использование React вместе с TypeScript</a></li>
+    <li><a href="#-">Стартовый шаблон</a></li>
+    <li><a href="#--1">Компонент-класс</a></li>
+    <li><a href="#--2">Компонент-функция</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="-react---typescript">Использование React вместе с TypeScript</h2>
+<p>TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.</p>
+<h2 id="-">Стартовый шаблон</h2>
+<p>Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.</p>
+<p>Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.</p>
+<p>И, собственно, всего одна команда и пара минут ожидания что бы можно было уже начать работать</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npx create-react-app my-app --template typescript
+<span class="c1"># or</span>
+yarn create react-app my-app --template typescript
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="--1">Компонент-класс</h2>
+<p>Для объявления компонента-класса достаточно унаследовать React.Component и объявить интерфейс для props’ов:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">IProps</span> <span class="p">{</span>
+    <span class="nx">message</span>: <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">NoticeComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">render() {</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span><span class="err">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Так же можно объявить интерфейс для состояния компонента:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">IProps</span> <span class="p">{</span>
+    <span class="nx">message</span>: <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kr">interface</span> <span class="nx">IState</span> <span class="p">{</span>
+    <span class="nx">isOpen</span>: <span class="kt">boolean</span>
+<span class="p">}</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">NoticeComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="p">,</span> <span class="nx">IState</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">render() {</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span><span class="err">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="--2">Компонент-функция</h2>
+<p>Тип компонентов-функций будет зависеть от способа объявления:</p>
+<p>Стрелочная функция:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">React</span> <span class="nx">from</span> <span class="err">“</span><span class="nx">react</span><span class="err">”</span>
+
+<span class="kr">interface</span> <span class="nx">IProps</span> <span class="p">{</span>
+    <span class="nx">message</span>: <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">Notice</span>: <span class="kt">React.SFC</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">:</span> <span class="nx">IProps</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span>
+<span class="p">)</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>В случае с обычной функцией потребуется указать тип, который она вернет:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">React</span> <span class="nx">from</span> <span class="err">“</span><span class="nx">react</span><span class="err">”</span>
+
+<span class="kr">interface</span> <span class="nx">IProps</span> <span class="p">{</span>
+    <span class="nx">message</span>: <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">Notice</span><span class="p">(</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">:</span> <span class="nx">IProps</span><span class="p">)</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">ReactElement</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="o">|</span> <span class="kc">null</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span><span class="err">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title"></span>
+    <span class="item-content">Arswarog</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title"></span>
+    <span class="item-content">
+        25 Jun 2018
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/react/">react</a>
+          <a href="/tags/typescript/">typescript</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/invisible-google-recaptcha/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Установка скрытой reCaptcha от Google</span>
+            <span class="prev-text nav-mobile"></span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:arswarog@yandex.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://linkedin.com/in/arswarog" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/arswarog" class="iconfont icon-github" title="github"></a>
+  <a href="https://arswarog.ru/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+     - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Arswarog</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
