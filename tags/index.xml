@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Even - A super concise theme for Hugo</title>
+    <title>Tags on Arswarog.ru - Еще один блог разработчика</title>
     <link>https://arswarog.ru/tags/</link>
-    <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
+    <description>Recent content in Tags on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Thu, 05 Dec 2019 20:47:39 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2020 11:54:11 +0300</lastBuildDate>
     
 	<atom:link href="https://arswarog.ru/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>angular</title>
+      <link>https://arswarog.ru/tags/angular/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lerna</title>
+      <link>https://arswarog.ru/tags/lerna/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/lerna/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monorepository</title>
+      <link>https://arswarog.ru/tags/monorepository/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/monorepository/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>theory</title>
@@ -17,6 +44,24 @@
       <pubDate>Thu, 05 Dec 2019 20:47:39 +0300</pubDate>
       
       <guid>https://arswarog.ru/tags/theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gemini</title>
+      <link>https://arswarog.ru/tags/gemini/</link>
+      <pubDate>Wed, 14 Nov 2018 16:31:41 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/gemini/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://arswarog.ru/tags/testing/</link>
+      <pubDate>Wed, 14 Nov 2018 16:31:41 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/tags/testing/</guid>
       <description></description>
     </item>
     

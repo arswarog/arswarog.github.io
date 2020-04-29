@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>React Typescript - Even - A super concise theme for Hugo</title>
+  <title>Использование React вместе с Typescript - Arswarog.ru - Еще один блог разработчика</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://arswarog.ru/post/react-typescript/" />
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="React Typescript" />
+<meta property="og:title" content="Использование React вместе с Typescript" />
 <meta property="og:description" content="Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
 Стартовый шаблон Для быстрого создания React &#43; TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
 Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать." />
@@ -48,7 +48,7 @@
 <meta property="og:url" content="https://arswarog.ru/post/react-typescript/" />
 <meta property="article:published_time" content="2018-06-25T19:57:11+03:00" />
 <meta property="article:modified_time" content="2018-06-25T19:57:11+03:00" />
-<meta itemprop="name" content="React Typescript">
+<meta itemprop="name" content="Использование React вместе с Typescript">
 <meta itemprop="description" content="Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
 Стартовый шаблон Для быстрого создания React &#43; TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
 Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.">
@@ -59,7 +59,7 @@
 
 
 <meta itemprop="keywords" content="react,typescript," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="React Typescript"/>
+<meta name="twitter:title" content="Использование React вместе с Typescript"/>
 <meta name="twitter:description" content="Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
 Стартовый шаблон Для быстрого создания React &#43; TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
 Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать."/>
@@ -89,6 +89,8 @@
   <ul class="mobile-menu-list">
     <a href="/tags/react">
         <li class="mobile-menu-item">React</li>
+      </a><a href="/tags/angular">
+        <li class="mobile-menu-item">Angular</li>
       </a><a href="/tags/typescript">
         <li class="mobile-menu-item">TypeScript</li>
       </a><a href="/tags/theory">
@@ -109,6 +111,8 @@
     <li class="menu-item">
         <a class="menu-item-link" href="/tags/react">React</a>
       </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/angular">Angular</a>
+      </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/typescript">TypeScript</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/theory">Теория</a>
@@ -125,10 +129,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">React Typescript</h1>
+      <h1 class="post-title">Использование React вместе с Typescript</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 25 Jun 2018 </span>
+        <span class="post-time"> 25 июня 2018</span>
         <div class="post-category">
             <a href="/categories/frontend/"> frontend </a>
             </div>
@@ -137,22 +141,22 @@
     </header>
 
     <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title"></h2>
+  <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#-react---typescript">Использование React вместе с TypeScript</a></li>
-    <li><a href="#-">Стартовый шаблон</a></li>
-    <li><a href="#--1">Компонент-класс</a></li>
-    <li><a href="#--2">Компонент-функция</a></li>
+    <li><a href="#использование-react-вместе-с-typescript">Использование React вместе с TypeScript</a></li>
+    <li><a href="#стартовый-шаблон">Стартовый шаблон</a></li>
+    <li><a href="#компонент-класс">Компонент-класс</a></li>
+    <li><a href="#компонент-функция">Компонент-функция</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h2 id="-react---typescript">Использование React вместе с TypeScript</h2>
+      <h2 id="использование-react-вместе-с-typescript">Использование React вместе с TypeScript</h2>
 <p>TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.</p>
-<h2 id="-">Стартовый шаблон</h2>
+<h2 id="стартовый-шаблон">Стартовый шаблон</h2>
 <p>Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.</p>
 <p>Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.</p>
 <p>И, собственно, всего одна команда и пара минут ожидания что бы можно было уже начать работать</p>
@@ -168,7 +172,7 @@
 yarn create react-app my-app --template typescript
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="--1">Компонент-класс</h2>
+</div><h2 id="компонент-класс">Компонент-класс</h2>
 <p>Для объявления компонента-класса достаточно унаследовать React.Component и объявить интерфейс для props’ов:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -193,7 +197,7 @@ yarn create react-app my-app --template typescript
 
 <span class="kr">export</span> <span class="kr">class</span> <span class="nx">NoticeComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="kr">public</span> <span class="nx">render() {</span>
-        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span><span class="err">;</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -228,12 +232,12 @@ yarn create react-app my-app --template typescript
 <span class="p">}</span>
 <span class="kr">export</span> <span class="kr">class</span> <span class="nx">NoticeComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="p">,</span> <span class="nx">IState</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="kr">public</span> <span class="nx">render() {</span>
-        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span><span class="err">;</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="--2">Компонент-функция</h2>
+</div><h2 id="компонент-функция">Компонент-функция</h2>
 <p>Тип компонентов-функций будет зависеть от способа объявления:</p>
 <p>Стрелочная функция:</p>
 <div class="highlight"><div class="chroma">
@@ -255,9 +259,9 @@ yarn create react-app my-app --template typescript
     <span class="nx">message</span>: <span class="kt">string</span>
 <span class="p">}</span>
 
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">Notice</span>: <span class="kt">React.SFC</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">:</span> <span class="nx">IProps</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span>
-<span class="p">)</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">Notice</span>: <span class="kt">React.SFC</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">({</span><span class="nx">message</span><span class="p">}</span><span class="o">:</span> <span class="nx">IProps</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>В случае с обычной функцией потребуется указать тип, который она вернет:</p>
@@ -280,8 +284,8 @@ yarn create react-app my-app --template typescript
     <span class="nx">message</span>: <span class="kt">string</span>
 <span class="p">}</span>
 
-<span class="kr">export</span> <span class="kd">function</span> <span class="nx">Notice</span><span class="p">(</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">:</span> <span class="nx">IProps</span><span class="p">)</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">ReactElement</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="o">|</span> <span class="kc">null</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span><span class="err">;</span>
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">Notice</span><span class="p">({</span><span class="nx">message</span><span class="p">}</span><span class="o">:</span> <span class="nx">IProps</span><span class="p">)</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">ReactElement</span><span class="o">&lt;</span><span class="nx">IProps</span><span class="o">&gt;</span> <span class="o">|</span> <span class="kc">null</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -290,13 +294,13 @@ yarn create react-app my-app --template typescript
 
     <div class="post-copyright">
   <p class="copyright-item">
-    <span class="item-title"></span>
+    <span class="item-title">Автор</span>
     <span class="item-content">Arswarog</span>
   </p>
   <p class="copyright-item">
-    <span class="item-title"></span>
+    <span class="item-title">Обновлено</span>
     <span class="item-content">
-        25 Jun 2018
+        25 июня 2018
         
     </span>
   </p>
@@ -312,7 +316,7 @@ yarn create react-app my-app --template typescript
         <a class="prev" href="/post/aha/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Сохраняем цветной вывод консоли</span>
-            <span class="prev-text nav-mobile"></span>
+            <span class="prev-text nav-mobile">Предыдущий пост</span>
           </a>
         
       </nav>
@@ -338,11 +342,11 @@ yarn create react-app my-app --template typescript
 
 <div class="copyright">
   <span class="power-by">
-    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-     - 
+    Theme - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
@@ -351,7 +355,7 @@ yarn create react-app my-app --template typescript
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2019
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

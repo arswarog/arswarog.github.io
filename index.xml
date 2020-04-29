@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Even - A super concise theme for Hugo</title>
+    <title>Arswarog.ru - Еще один блог разработчика</title>
     <link>https://arswarog.ru/</link>
-    <description>Recent content on Even - A super concise theme for Hugo</description>
+    <description>Recent content on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Thu, 05 Dec 2019 20:47:39 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 08:00:14 +0300</lastBuildDate>
     
 	<atom:link href="https://arswarog.ru/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Календарь жизни</title>
+      <link>https://arswarog.ru/post/life-calendar/</link>
+      <pubDate>Wed, 29 Apr 2020 08:00:14 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/life-calendar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Typescript Library</title>
+      <link>https://arswarog.ru/post/typescript-library/</link>
+      <pubDate>Thu, 30 Jan 2020 16:30:29 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/typescript-library/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Использование Lerna</title>
+      <link>https://arswarog.ru/post/lerna-for-mern-stack/</link>
+      <pubDate>Thu, 30 Jan 2020 04:59:39 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/lerna-for-mern-stack/</guid>
+      <description>Что такое Lerna Разделение большой кодовой базы в независимо версионируемые пакеты очень полезно для шаринга кода. Однако внесение изменения в нескольких репозиториях солжно как для самого изменения так и для дальнейшего отслеживания.
+В таких случаях удобным способом хранения кодовой базы может стать монорепозиторий. Использование всего одного репозитория для нескольких проектов и библиотек приносит удобство в контроле и изменении кода.
+Lerna - иструмент для упрощения работы с JavaScript монорепозиторием
+Использование Создадим проект mkdir company</description>
+    </item>
+    
+    <item>
+      <title>Монорепозиторий с Lerna для Angular</title>
+      <link>https://arswarog.ru/post/lerna-angular/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/lerna-angular/</guid>
+      <description>Последовательность действий Создаем приложение для ng new monorepo --createApplication=false
+npx lerna init
+ng g lib first
+Изменим путь где lerna будет искать пакеты на путь где angular хранит свои проекты
+1 2 3 4 5 6  { &amp;#34;packages&amp;#34;: [ &amp;#34;projects/*&amp;#34; ], ... }   Теперь папку packages, автоматически созданную lerna, можно удалить rm -r packages
+И создадим пару библиотек ng g lib first ng g lib second
+Если требуется, меняем имена пакетов в библиотеках</description>
+    </item>
     
     <item>
       <title>Паттерны проектирования</title>
@@ -38,6 +83,18 @@
     </item>
     
     <item>
+      <title>Что такое Регресивное тестирование</title>
+      <link>https://arswarog.ru/post/testing-with-gemini/</link>
+      <pubDate>Wed, 14 Nov 2018 16:31:41 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/testing-with-gemini/</guid>
+      <description>Настройка окружения
+selenium-standalone start
+module.exports = { rootUrl: &amp;lsquo;http://localhost:4200&amp;rsquo;, // Наш сайт gridUrl: &amp;lsquo;http://127.0.0.1:4444/wd/hub&amp;rsquo;, // Selenium grid endpoint windowSize: &amp;lsquo;1600x1080&amp;rsquo;, // расширение экрана
+calibrate: false, browsers: { chrome: { desiredCapabilities: { browserName: &#39;chrome&#39; } }, // firefox: { // desiredCapabilities: { // browserName: &#39;firefox&#39;, // version: &amp;quot;63.0&amp;quot;, // } // } }, system: { plugins: { &#39;html-reporter/gemini&#39;: { enabled: true, path: &#39;tmp/gemini&#39;, defaultView: &#39;all&#39;, baseHost: &#39;test.com&#39; } } },  };</description>
+    </item>
+    
+    <item>
       <title>Алиасы в git</title>
       <link>https://arswarog.ru/post/git-aliases/</link>
       <pubDate>Sun, 04 Nov 2018 22:00:12 +0300</pubDate>
@@ -52,7 +109,7 @@
     </item>
     
     <item>
-      <title>Dunai framework</title>
+      <title>Как я писал фреймворк Dunai</title>
       <link>https://arswarog.ru/post/dunai/</link>
       <pubDate>Fri, 03 Aug 2018 22:13:13 +0300</pubDate>
       
@@ -86,7 +143,7 @@
     </item>
     
     <item>
-      <title>React Typescript</title>
+      <title>Использование React вместе с Typescript</title>
       <link>https://arswarog.ru/post/react-typescript/</link>
       <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
       

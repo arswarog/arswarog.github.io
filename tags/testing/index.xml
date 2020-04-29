@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>testing on Arswarog.ru - Еще один блог разработчика</title>
+    <link>https://arswarog.ru/tags/testing/</link>
+    <description>Recent content in testing on Arswarog.ru - Еще один блог разработчика</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Wed, 14 Nov 2018 16:31:41 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Что такое Регресивное тестирование</title>
+      <link>https://arswarog.ru/post/testing-with-gemini/</link>
+      <pubDate>Wed, 14 Nov 2018 16:31:41 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/testing-with-gemini/</guid>
+      <description>Настройка окружения
+selenium-standalone start
+module.exports = { rootUrl: &amp;lsquo;http://localhost:4200&amp;rsquo;, // Наш сайт gridUrl: &amp;lsquo;http://127.0.0.1:4444/wd/hub&amp;rsquo;, // Selenium grid endpoint windowSize: &amp;lsquo;1600x1080&amp;rsquo;, // расширение экрана
+calibrate: false, browsers: { chrome: { desiredCapabilities: { browserName: &#39;chrome&#39; } }, // firefox: { // desiredCapabilities: { // browserName: &#39;firefox&#39;, // version: &amp;quot;63.0&amp;quot;, // } // } }, system: { plugins: { &#39;html-reporter/gemini&#39;: { enabled: true, path: &#39;tmp/gemini&#39;, defaultView: &#39;all&#39;, baseHost: &#39;test.com&#39; } } },  };</description>
+    </item>
+    
+  </channel>
+</rss>

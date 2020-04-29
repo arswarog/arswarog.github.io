@@ -2,29 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://arswarog.ru/categories/</loc>
-    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://arswarog.ru/</loc>
-    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <lastmod>2040-10-31T04:59:39+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://arswarog.ru/post/</loc>
-    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <lastmod>2040-10-31T04:59:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/life-calendar/</loc>
+    <lastmod>2020-04-29T08:00:14+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/typescript-library/</loc>
+    <lastmod>2020-01-30T16:30:29+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/lerna-for-mern-stack/</loc>
+    <lastmod>2040-10-31T04:59:39+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/angular/</loc>
+    <lastmod>2020-01-29T11:54:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/categories/</loc>
+    <lastmod>2020-01-29T11:54:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/categories/frontend/</loc>
+    <lastmod>2020-01-29T11:54:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/lerna/</loc>
+    <lastmod>2020-01-29T11:54:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/monorepository/</loc>
+    <lastmod>2020-01-29T11:54:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://arswarog.ru/tags/</loc>
-    <lastmod>2019-12-05T20:47:39+03:00</lastmod>
+    <lastmod>2020-01-29T11:54:11+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/lerna-angular/</loc>
+    <lastmod>2020-01-29T11:54:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -51,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://arswarog.ru/categories/frontend/</loc>
-    <lastmod>2019-01-31T21:04:55+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://arswarog.ru/post/invisible-google-recaptcha/</loc>
     <lastmod>2019-01-31T21:04:55+03:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -65,14 +114,35 @@
   </url>
   
   <url>
-    <loc>https://arswarog.ru/tags/git/</loc>
-    <lastmod>2018-11-04T22:00:12+03:00</lastmod>
+    <loc>https://arswarog.ru/tags/gemini/</loc>
+    <lastmod>2018-11-14T16:31:41+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/testing/</loc>
+    <lastmod>2018-11-14T16:31:41+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://arswarog.ru/categories/tools/</loc>
+    <lastmod>2018-11-14T16:31:41+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/post/testing-with-gemini/</loc>
+    <lastmod>2018-11-14T16:31:41+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/tags/git/</loc>
     <lastmod>2018-11-04T22:00:12+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -121,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://arswarog.ru/post/react-typescript/</loc>
+    <loc>https://arswarog.ru/tags/typescript/</loc>
     <lastmod>2018-06-25T19:57:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://arswarog.ru/tags/typescript/</loc>
+    <loc>https://arswarog.ru/post/react-typescript/</loc>
     <lastmod>2018-06-25T19:57:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

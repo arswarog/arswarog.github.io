@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>typescript on Even - A super concise theme for Hugo</title>
+    <title>typescript on Arswarog.ru - Еще один блог разработчика</title>
     <link>https://arswarog.ru/tags/typescript/</link>
-    <description>Recent content in typescript on Even - A super concise theme for Hugo</description>
+    <description>Recent content in typescript on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
     <lastBuildDate>Mon, 25 Jun 2018 19:57:11 +0300</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>React Typescript</title>
+      <title>Использование React вместе с Typescript</title>
       <link>https://arswarog.ru/post/react-typescript/</link>
       <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
       
