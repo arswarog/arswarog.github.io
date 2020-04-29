@@ -6,19 +6,10 @@
     <description>Recent content in Posts on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Wed, 29 Apr 2020 08:00:14 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 04:59:39 +0300</lastBuildDate>
     
 	<atom:link href="https://arswarog.ru/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Календарь жизни</title>
-      <link>https://arswarog.ru/post/life-calendar/</link>
-      <pubDate>Wed, 29 Apr 2020 08:00:14 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/life-calendar/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Использование Lerna</title>
