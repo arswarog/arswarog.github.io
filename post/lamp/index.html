@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>LAMP сервер для разработки (без PHP на хосте) - Arswarog.ru - Еще один блог разработчика</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Arswarog" /><meta name="description" content="Автозапуск через systemd Создаем файл сервиса:
+sudo touch /etc/systemd/system/lamp.service
+И выставляем ему права доступа:
+sudo chmod 664 /etc/systemd/system/lamp.service
+И поместим в него все необходимые настройки
+sudo vim /etc/systemd/system/lamp.service
+1 2 3 4 5 6 7 8 9 10 11  [Unit] Description=LAMP service After=docker.target [Service] WorkingDirectory=/srv/lamp Type=one-shot ExecStart=/usr/bin/docker-compose up [Install] WantedBy=multi-user.target   После этого требуется обновить конфигурацию systemd:
+sudo systemctl deamon-reload
+И уже можно запускать сервис:
+sudo systemctl start lamp" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.73.0 with theme even" />
+
+
+<link rel="canonical" href="https://arswarog.ru/post/lamp/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.fcebd710.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="LAMP сервер для разработки (без PHP на хосте)" />
+<meta property="og:description" content="Автозапуск через systemd Создаем файл сервиса:
+sudo touch /etc/systemd/system/lamp.service
+И выставляем ему права доступа:
+sudo chmod 664 /etc/systemd/system/lamp.service
+И поместим в него все необходимые настройки
+sudo vim /etc/systemd/system/lamp.service
+1 2 3 4 5 6 7 8 9 10 11  [Unit] Description=LAMP service After=docker.target [Service] WorkingDirectory=/srv/lamp Type=one-shot ExecStart=/usr/bin/docker-compose up [Install] WantedBy=multi-user.target   После этого требуется обновить конфигурацию systemd:
+sudo systemctl deamon-reload
+И уже можно запускать сервис:
+sudo systemctl start lamp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arswarog.ru/post/lamp/" />
+<meta property="article:published_time" content="2020-07-17T10:13:05+03:00" />
+<meta property="article:modified_time" content="2020-07-17T10:13:05+03:00" />
+<meta itemprop="name" content="LAMP сервер для разработки (без PHP на хосте)">
+<meta itemprop="description" content="Автозапуск через systemd Создаем файл сервиса:
+sudo touch /etc/systemd/system/lamp.service
+И выставляем ему права доступа:
+sudo chmod 664 /etc/systemd/system/lamp.service
+И поместим в него все необходимые настройки
+sudo vim /etc/systemd/system/lamp.service
+1 2 3 4 5 6 7 8 9 10 11  [Unit] Description=LAMP service After=docker.target [Service] WorkingDirectory=/srv/lamp Type=one-shot ExecStart=/usr/bin/docker-compose up [Install] WantedBy=multi-user.target   После этого требуется обновить конфигурацию systemd:
+sudo systemctl deamon-reload
+И уже можно запускать сервис:
+sudo systemctl start lamp">
+<meta itemprop="datePublished" content="2020-07-17T10:13:05&#43;03:00" />
+<meta itemprop="dateModified" content="2020-07-17T10:13:05&#43;03:00" />
+<meta itemprop="wordCount" content="152">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LAMP сервер для разработки (без PHP на хосте)"/>
+<meta name="twitter:description" content="Автозапуск через systemd Создаем файл сервиса:
+sudo touch /etc/systemd/system/lamp.service
+И выставляем ему права доступа:
+sudo chmod 664 /etc/systemd/system/lamp.service
+И поместим в него все необходимые настройки
+sudo vim /etc/systemd/system/lamp.service
+1 2 3 4 5 6 7 8 9 10 11  [Unit] Description=LAMP service After=docker.target [Service] WorkingDirectory=/srv/lamp Type=one-shot ExecStart=/usr/bin/docker-compose up [Install] WantedBy=multi-user.target   После этого требуется обновить конфигурацию systemd:
+sudo systemctl deamon-reload
+И уже можно запускать сервис:
+sudo systemctl start lamp"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Arswarog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/tags/react">
+        <li class="mobile-menu-item">React</li>
+      </a><a href="/tags/angular">
+        <li class="mobile-menu-item">Angular</li>
+      </a><a href="/tags/typescript">
+        <li class="mobile-menu-item">TypeScript</li>
+      </a><a href="/tags/theory">
+        <li class="mobile-menu-item">Теория</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Архив</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Arswarog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/tags/react">React</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/angular">Angular</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/typescript">TypeScript</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/theory">Теория</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Архив</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">LAMP сервер для разработки (без PHP на хосте)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 17 июля 2020</span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#автозапуск-через-systemd">Автозапуск через systemd</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="автозапуск-через-systemd">Автозапуск через systemd</h2>
+<p>Создаем файл сервиса:</p>
+<p><code>sudo touch /etc/systemd/system/lamp.service</code></p>
+<p>И выставляем ему права доступа:</p>
+<p><code>sudo chmod 664 /etc/systemd/system/lamp.service</code></p>
+<p>И поместим в него все необходимые настройки</p>
+<p><code>sudo vim /etc/systemd/system/lamp.service</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
+Description=LAMP service
+After=docker.target
+
+[Service]
+WorkingDirectory=/srv/lamp
+Type=one-shot
+ExecStart=/usr/bin/docker-compose up
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></td></tr></table>
+</div>
+</div><p>После этого требуется обновить конфигурацию systemd:</p>
+<p><code>sudo systemctl deamon-reload</code></p>
+<p>И уже можно запускать сервис:</p>
+<p><code>sudo systemctl start lamp</code></p>
+<p>То, что сервис запустился, можно проверить, посмотрев список запущеных docker-контейнеров:</p>
+<p><code>docker ps</code></p>
+<p>Результат этой команды будет примерно таким:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                 NAMES
+408b01017fd5        mysql:5.7                      &#34;docker-entrypoint.s…&#34;   10 days ago         Up 30 minutes       3306/tcp, 33060/tcp   lamp_mysql_1
+0d19774097c7        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#34;   10 days ago         Up 30 minutes       80/tcp                lamp_phpmyadmin_1
+1cc5aaa40f9b        jwilder/nginx-proxy            &#34;/app/docker-entrypo…&#34;   10 days ago         Up 30 minutes       0.0.0.0:80-&gt;80/tcp    lamp_proxy_1
+</code></pre></td></tr></table>
+</div>
+</div><p>По завершению работы LAMP сервис можно остановить:</p>
+<p><code>sudo systemctl stop lamp</code></p>
+<p>Также можно настроить автозапуск сервиса:</p>
+<p><code>sudo systemctl enable lamp</code></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Автор</span>
+    <span class="item-content">Arswarog</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">Обновлено</span>
+    <span class="item-content">
+        17 июля 2020
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/lerna-for-mern-stack/">
+            <span class="next-text nav-default">Использование Lerna</span>
+            <span class="next-text nav-mobile">Следующий пост</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:arswarog@yandex.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://linkedin.com/in/arswarog" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/arswarog" class="iconfont icon-github" title="github"></a>
+  <a href="https://arswarog.ru/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Arswarog</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.7dc910f3.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

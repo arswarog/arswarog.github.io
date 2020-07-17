@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.2 with theme even" />
+<meta name="generator" content="Hugo 0.73.0 with theme even" />
 
 
 <link rel="canonical" href="https://arswarog.ru/" />
@@ -36,7 +36,7 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link href="/dist/even.fcebd710.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -44,7 +44,7 @@
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://arswarog.ru/" />
-<meta property="og:updated_time" content="2020-01-30T04:59:39+03:00" />
+<meta property="og:updated_time" content="2040-10-31T04:59:39+03:00" />
 <meta itemprop="name" content="Arswarog.ru - Еще один блог разработчика">
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arswarog.ru - Еще один блог разработчика"/>
@@ -113,6 +113,34 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lamp/">LAMP сервер для разработки (без PHP на хосте)</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 17 июля 2020</span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Автозапуск через systemd Создаем файл сервиса:
+sudo touch /etc/systemd/system/lamp.service
+И выставляем ему права доступа:
+sudo chmod 664 /etc/systemd/system/lamp.service
+И поместим в него все необходимые настройки
+sudo vim /etc/systemd/system/lamp.service
+1 2 3 4 5 6 7 8 9 10 11  [Unit] Description=LAMP service After=docker.target [Service] WorkingDirectory=/srv/lamp Type=one-shot ExecStart=/usr/bin/docker-compose up [Install] WantedBy=multi-user.target   После этого требуется обновить конфигурацию systemd:
+sudo systemctl deamon-reload
+И уже можно запускать сервис:
+sudo systemctl start lamp
+    </div>
+    <div class="read-more">
+      <a href="/post/lamp/" class="read-more-link">Читать дальше...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/lerna-for-mern-stack/">Использование Lerna</a></h1>
@@ -212,30 +240,6 @@ ng g lib first
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/testing-with-gemini/">Что такое Регресивное тестирование</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 14 ноября 2018</span>
-      <div class="post-category">
-          <a href="/categories/tools/"> tools </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Настройка окружения
-selenium-standalone start
-module.exports = { rootUrl: &lsquo;http://localhost:4200&rsquo;, // Наш сайт gridUrl: &lsquo;http://127.0.0.1:4444/wd/hub&rsquo;, // Selenium grid endpoint windowSize: &lsquo;1600x1080&rsquo;, // расширение экрана
-calibrate: false, browsers: { chrome: { desiredCapabilities: { browserName: 'chrome' } }, // firefox: { // desiredCapabilities: { // browserName: 'firefox', // version: &quot;63.0&quot;, // } // } }, system: { plugins: { 'html-reporter/gemini': { enabled: true, path: 'tmp/gemini', defaultView: 'all', baseHost: 'test.com' } } },  };
-    </div>
-    <div class="read-more">
-      <a href="/post/testing-with-gemini/" class="read-more-link">Читать дальше...</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -291,7 +295,7 @@ calibrate: false, browsers: { chrome: { desiredCapabilities: { browserName: 'chr
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+<script type="text/javascript" src="/dist/even.7dc910f3.min.js"></script>
 
 
 
