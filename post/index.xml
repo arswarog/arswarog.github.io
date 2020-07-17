@@ -6,40 +6,10 @@
     <description>Recent content in Posts on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 17 Jul 2020 10:13:05 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2020 11:54:11 +0300</lastBuildDate>
     
 	<atom:link href="https://arswarog.ru/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>LAMP сервер для разработки (без PHP на хосте)</title>
-      <link>https://arswarog.ru/post/lamp/</link>
-      <pubDate>Fri, 17 Jul 2020 10:13:05 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/lamp/</guid>
-      <description>Автозапуск через systemd Создаем файл сервиса:
-sudo touch /etc/systemd/system/lamp.service
-И выставляем ему права доступа:
-sudo chmod 664 /etc/systemd/system/lamp.service
-И поместим в него все необходимые настройки
-sudo vim /etc/systemd/system/lamp.service
-1 2 3 4 5 6 7 8 9 10 11  [Unit] Description=LAMP service After=docker.target [Service] WorkingDirectory=/srv/lamp Type=one-shot ExecStart=/usr/bin/docker-compose up [Install] WantedBy=multi-user.target   После этого требуется обновить конфигурацию systemd:
-sudo systemctl deamon-reload
-И уже можно запускать сервис:
-sudo systemctl start lamp</description>
-    </item>
-    
-    <item>
-      <title>Использование Lerna</title>
-      <link>https://arswarog.ru/post/lerna-for-mern-stack/</link>
-      <pubDate>Thu, 30 Jan 2020 04:59:39 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/lerna-for-mern-stack/</guid>
-      <description>Что такое Lerna Разделение большой кодовой базы в независимо версионируемые пакеты очень полезно для шаринга кода. Однако внесение изменения в нескольких репозиториях солжно как для самого изменения так и для дальнейшего отслеживания.
-В таких случаях удобным способом хранения кодовой базы может стать монорепозиторий. Использование всего одного репозитория для нескольких проектов и библиотек приносит удобство в контроле и изменении кода.
-Lerna - инструмент для упрощения работы с JavaScript монорепозиторием
-Использование Создадим проект mkdir company</description>
-    </item>
     
     <item>
       <title>Монорепозиторий с Lerna для Angular</title>
@@ -80,18 +50,6 @@ ng g lib first
 Подключить невидимую рекапчу очень просто:
 Создаем контейнер и подключаем скрипт
 1 2 3  &amp;lt;div id=&amp;#34;recaptcha&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;#34;https://www.google.com/recaptcha/api.js?onload=onloadReCaptchaInvisible&amp;amp;render=explicit&amp;#34; async defer&amp;gt;&amp;lt;/script&amp;gt;   Настраиваем и пару функций для удобной работы</description>
-    </item>
-    
-    <item>
-      <title>Что такое Регресивное тестирование</title>
-      <link>https://arswarog.ru/post/testing-with-gemini/</link>
-      <pubDate>Wed, 14 Nov 2018 16:31:41 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/testing-with-gemini/</guid>
-      <description>Настройка окружения
-selenium-standalone start
-module.exports = { rootUrl: &amp;lsquo;http://localhost:4200&amp;rsquo;, // Наш сайт gridUrl: &amp;lsquo;http://127.0.0.1:4444/wd/hub&amp;rsquo;, // Selenium grid endpoint windowSize: &amp;lsquo;1600x1080&amp;rsquo;, // расширение экрана
-calibrate: false, browsers: { chrome: { desiredCapabilities: { browserName: &#39;chrome&#39; } }, // firefox: { // desiredCapabilities: { // browserName: &#39;firefox&#39;, // version: &amp;quot;63.0&amp;quot;, // } // } }, system: { plugins: { &#39;html-reporter/gemini&#39;: { enabled: true, path: &#39;tmp/gemini&#39;, defaultView: &#39;all&#39;, baseHost: &#39;test.com&#39; } } },  };</description>
     </item>
     
     <item>
