@@ -6,10 +6,20 @@
     <description>Recent content on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Wed, 29 Jan 2020 11:54:11 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2020 10:13:05 +0300</lastBuildDate>
     
 	<atom:link href="https://arswarog.ru/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LAMP сервер для разработки (без PHP на хосте)</title>
+      <link>https://arswarog.ru/post/lamp/</link>
+      <pubDate>Fri, 17 Jul 2020 10:13:05 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/lamp/</guid>
+      <description>В этой статье я рассказываю как можно быстро поднять связку PHP + MYSQL используя Docker на компьютере без установки чего-либо на хост (докер конечно уже должен стоять)
+Требования  легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP  В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)</description>
+    </item>
     
     <item>
       <title>Монорепозиторий с Lerna для Angular</title>
