@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>another on Arswarog.ru - Еще один блог разработчика</title>
+    <link>https://arswarog.ru/categories/another/</link>
+    <description>Recent content in another on Arswarog.ru - Еще один блог разработчика</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Wed, 29 Jan 2020 11:54:11 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/categories/another/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Монорепозиторий с Lerna для Angular</title>
+      <link>https://arswarog.ru/post/lerna-angular/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/lerna-angular/</guid>
+      <description>Последовательность действий Создаем приложение для ng new monorepo --createApplication=false
+npx lerna init
+ng g lib first
+Изменим путь где lerna будет искать пакеты на путь где angular хранит свои проекты
+1 2 3 4 5 6  { &amp;#34;packages&amp;#34;: [ &amp;#34;projects/*&amp;#34; ], ... }   Теперь папку packages, автоматически созданную lerna, можно удалить rm -r packages
+И создадим пару библиотек ng g lib first ng g lib second
+Если требуется, меняем имена пакетов в библиотеках</description>
+    </item>
+    
+    <item>
+      <title>Паттерны проектирования</title>
+      <link>https://arswarog.ru/post/patterns/</link>
+      <pubDate>Thu, 05 Dec 2019 20:47:39 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/patterns/</guid>
+      <description>Паттерны проектирования или шаблоны проектирования — это типичные способы решения некоторых типичных проблем.
+Википедия описывает их следующим образом:
+ Шаблон проектирования, или паттерн, в разработке программного обеспечения — повторяемая архитектурная конструкция, представляющая собой решение проблемы проектирования, в рамках некоторого часто возникающего контекста.
+ Не стоит преувеличивать значение паттернов и применять везде и в обязательном порядке. Однако и приуменьшать их значение тоже не стоит. Это методы решение частых задач и эти методы являются опытом других разработчиков.</description>
+    </item>
+    
+    <item>
+      <title>Установка скрытой reCaptcha от Google</title>
+      <link>https://arswarog.ru/post/invisible-google-recaptcha/</link>
+      <pubDate>Thu, 31 Jan 2019 21:04:55 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/invisible-google-recaptcha/</guid>
+      <description>Google предоставляет замечательное средство для борьбы со спамом — reCaptcha
+Обычно это просто галочка «Я не робот»
+Однако есть возможность не делать даже этого — Invisible reCAPTCHA проверяет пользователя в фоне и только если возникли сомнения отображает окно с дополнительным подтверждением
+Подключить невидимую рекапчу очень просто:
+Создаем контейнер и подключаем скрипт
+1 2 3  &amp;lt;div id=&amp;#34;recaptcha&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;#34;https://www.google.com/recaptcha/api.js?onload=onloadReCaptchaInvisible&amp;amp;render=explicit&amp;#34; async defer&amp;gt;&amp;lt;/script&amp;gt;   Настраиваем и пару функций для удобной работы</description>
+    </item>
+    
+    <item>
+      <title>Алиасы в git</title>
+      <link>https://arswarog.ru/post/git-aliases/</link>
+      <pubDate>Sun, 04 Nov 2018 22:00:12 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/git-aliases/</guid>
+      <description>В GIT есть очень удобная функциональность для создания кратких команд:
+1  git config --global alias.имя_алиаса команда   Например, очень удобная команда:
+1  git log --oneline --graph   Создающая вывод в терминале всего дерева коммитов Очень удобно сделать сокращение такой команды
+1  git l   для этого надо выполнить
+1  git config --global alias.l log --oneline --graph   или улучшенный вариант
+1  git config --global alias.</description>
+    </item>
+    
+    <item>
+      <title>Как я писал фреймворк Dunai</title>
+      <link>https://arswarog.ru/post/dunai/</link>
+      <pubDate>Fri, 03 Aug 2018 22:13:13 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/dunai/</guid>
+      <description>Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
+Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.
+И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
+И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
+Конец.
+Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.</description>
+    </item>
+    
+    <item>
+      <title>Шпаргалка по Python</title>
+      <link>https://arswarog.ru/post/python/</link>
+      <pubDate>Mon, 30 Jul 2018 22:26:12 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/python/</guid>
+      <description>На pythonworld.ru нашел отличную шпаргалку </description>
+    </item>
+    
+    <item>
+      <title>Сохраняем цветной вывод консоли</title>
+      <link>https://arswarog.ru/post/aha/</link>
+      <pubDate>Mon, 25 Jun 2018 22:19:25 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/aha/</guid>
+      <description>Бывают случаи, когда требуется сохранить вывод приложения в консоли со всеми плюшками, такими как цвет текста, жирный шрифт и т.д. Для таких случаев есть интересная программа, написанная на Cи — aha, так же доступная в AUR ArchLinux
+Просто перенаправляем ей вывод программы Например, сохраним в html справку самой программы:
+1  $ aha -h | aha &amp;gt; out.html   Или настроим результат, добавим черный фон (--black) и включим использование таблицы стилей вместо inline стилей (-s)</description>
+    </item>
+    
+  </channel>
+</rss>

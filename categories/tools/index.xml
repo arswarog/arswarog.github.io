@@ -6,10 +6,25 @@
     <description>Recent content in tools on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Sun, 04 Nov 2018 22:00:12 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2020 11:54:11 +0300</lastBuildDate>
     
 	<atom:link href="https://arswarog.ru/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Монорепозиторий с Lerna для Angular</title>
+      <link>https://arswarog.ru/post/lerna-angular/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/lerna-angular/</guid>
+      <description>Последовательность действий Создаем приложение для ng new monorepo --createApplication=false
+npx lerna init
+ng g lib first
+Изменим путь где lerna будет искать пакеты на путь где angular хранит свои проекты
+1 2 3 4 5 6  { &amp;#34;packages&amp;#34;: [ &amp;#34;projects/*&amp;#34; ], ... }   Теперь папку packages, автоматически созданную lerna, можно удалить rm -r packages
+И создадим пару библиотек ng g lib first ng g lib second
+Если требуется, меняем имена пакетов в библиотеках</description>
+    </item>
     
     <item>
       <title>Алиасы в git</title>

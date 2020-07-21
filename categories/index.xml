@@ -21,11 +21,29 @@
     </item>
     
     <item>
-      <title>frontend</title>
-      <link>https://arswarog.ru/categories/frontend/</link>
+      <title>angular</title>
+      <link>https://arswarog.ru/categories/angular/</link>
       <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
       
-      <guid>https://arswarog.ru/categories/frontend/</guid>
+      <guid>https://arswarog.ru/categories/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>another</title>
+      <link>https://arswarog.ru/categories/another/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/categories/another/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://arswarog.ru/categories/tools/</link>
+      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/categories/tools/</guid>
       <description></description>
     </item>
     
@@ -39,20 +57,20 @@
     </item>
     
     <item>
-      <title>tools</title>
-      <link>https://arswarog.ru/categories/tools/</link>
-      <pubDate>Sun, 04 Nov 2018 22:00:12 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>python</title>
       <link>https://arswarog.ru/categories/python/</link>
       <pubDate>Mon, 30 Jul 2018 22:26:12 +0300</pubDate>
       
       <guid>https://arswarog.ru/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://arswarog.ru/categories/react/</link>
+      <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/categories/react/</guid>
       <description></description>
     </item>
     

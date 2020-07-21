@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Arswarog.ru - Еще один блог разработчика</title>
+    <link>https://arswarog.ru/tags/tools/</link>
+    <description>Recent content in tools on Arswarog.ru - Еще один блог разработчика</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Mon, 25 Jun 2018 22:19:25 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Сохраняем цветной вывод консоли</title>
+      <link>https://arswarog.ru/post/aha/</link>
+      <pubDate>Mon, 25 Jun 2018 22:19:25 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/aha/</guid>
+      <description>Бывают случаи, когда требуется сохранить вывод приложения в консоли со всеми плюшками, такими как цвет текста, жирный шрифт и т.д. Для таких случаев есть интересная программа, написанная на Cи — aha, так же доступная в AUR ArchLinux
+Просто перенаправляем ей вывод программы Например, сохраним в html справку самой программы:
+1  $ aha -h | aha &amp;gt; out.html   Или настроим результат, добавим черный фон (--black) и включим использование таблицы стилей вместо inline стилей (-s)</description>
+    </item>
+    
+  </channel>
+</rss>

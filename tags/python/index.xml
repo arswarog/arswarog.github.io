@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Arswarog.ru - Еще один блог разработчика</title>
+    <link>https://arswarog.ru/tags/python/</link>
+    <description>Recent content in python on Arswarog.ru - Еще один блог разработчика</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Mon, 30 Jul 2018 22:26:12 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Шпаргалка по Python</title>
+      <link>https://arswarog.ru/post/python/</link>
+      <pubDate>Mon, 30 Jul 2018 22:26:12 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/python/</guid>
+      <description>На pythonworld.ru нашел отличную шпаргалку </description>
+    </item>
+    
+  </channel>
+</rss>
