@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Event Loop NodeJS: Part 1 - Arswarog.ru - Еще один блог разработчика</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Arswarog" /><meta name="description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.2 with theme even" />
+
+
+<link rel="canonical" href="https://arswarog.ru/post/event-loop-nodejs-p1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.fcebd710.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Event Loop NodeJS: Part 1" />
+<meta property="og:description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arswarog.ru/post/event-loop-nodejs-p1/" />
+<meta property="article:published_time" content="2021-06-08T06:41:57+03:00" />
+<meta property="article:modified_time" content="2021-06-08T06:41:57+03:00" />
+<meta itemprop="name" content="Event Loop NodeJS: Part 1">
+<meta itemprop="description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка.">
+<meta itemprop="datePublished" content="2021-06-08T06:41:57&#43;03:00" />
+<meta itemprop="dateModified" content="2021-06-08T06:41:57&#43;03:00" />
+<meta itemprop="wordCount" content="468">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Event Loop NodeJS: Part 1"/>
+<meta name="twitter:description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Arswarog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/categories/react">
+        <li class="mobile-menu-item">React</li>
+      </a><a href="/categories/devops">
+        <li class="mobile-menu-item">DevOps</li>
+      </a><a href="/categories/theory">
+        <li class="mobile-menu-item">Теория</li>
+      </a><a href="/categories/another">
+        <li class="mobile-menu-item">Другое</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Архив</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Arswarog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/categories/react">React</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/devops">DevOps</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/theory">Теория</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/another">Другое</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Архив</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Event Loop NodeJS: Part 1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 8 июня 2021</span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Содержание</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#event-loop-nodejs">Event Loop NodeJS</a></li>
+    <li><a href="#event-demultiplexer">Event Demultiplexer</a></li>
+    <li><a href="#event-queue">Event Queue</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="event-loop-nodejs">Event Loop NodeJS</h2>
+<p>NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).</p>
+<p>Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (<strong>Event Loop</strong>). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка.</p>
+<p>Для начала, любой запрос ввода/вывода должен завершиться и вернуть ответ. Ответом будут запрошенные данные, если запрос успешно выполнился или ошибка, которая сообщит что запрос завершился неудачей. Получение этого ответа и называется событием. Эти события обрабатываются согласно следующему алгоритму:</p>
+<ol>
+<li><strong>Event Demultiplexer</strong> получает запрос и отправляет его в соответствующую систему.</li>
+<li>после обработки ввода / вывода  **Event Demultiplexer **регистрирует обработчики этого <strong>события</strong>, и, когда придет ответ, необходимый обработчик этого события будет добавлен в очередь событий (<strong>Event Queue)</strong></li>
+<li>когда в очереди имеются события они обрабатываются в порядке их добавления в очередь</li>
+<li>если события больше нет и нет ожидающих ответа запросов, программа завершается</li>
+</ol>
+<p>Именно это и есть <strong>Event Loop</strong>. Он однопоточный и <em>почти</em> бесконечный.</p>
+<p>В целом это соответствует паттерну проектирования <strong>Reactor Pattern</strong>, но <strong>Event Loop</strong> более сложен, потому как Event demultiplexer это не один компонент, обрабатывающий все события ввода/вывода, да и очередь событий в нем не такая простая как может показаться.</p>
+<h2 id="event-demultiplexer">Event Demultiplexer</h2>
+<p>В реальном мире не существует сущности <strong>Event Demultiplexer</strong>, это абстракция. В реальном мире он реализован во множестве разных систем, например epoll в Linux, kqueue в BSD системах (macOS), event ports в Solaris, IOCP (Input Output Completion Port) в Windows, и т.д.. NodeJS лишь предоставляет некоторую обертку для работы с ними. Для этого была разработана библиотека libuv, которая реализует большую часть этой абстракции</p>
+<h2 id="event-queue">Event Queue</h2>
+<p>В NodeJS существует несколько очередей, и в каждую попадают события своего типа</p>
+<p>После очередной главной очереди event loop обрабатывает события из двух промежуточных очередей.</p>
+<p>Главные очереди, обрабатываемые libuv:</p>
+<ul>
+<li>очередь таймеров, пополняемая посредством функций setTimeout и setInterval</li>
+<li>события ввода/вывода</li>
+<li>очередь, пополняемая посредством функции setImmediate</li>
+<li>очередь обработчиков событий закрытия</li>
+</ul>
+<p>Кроме 4 основных очередей существуют еще 2 очереди микрозадач (<strong>microtasks</strong>), прежде упомянутые как промежуточные, эти очереди уже являются частью NodeJS а не libuv:</p>
+<ul>
+<li><strong>Next ticks</strong> queue - микрозадачи, добавленные посредством функции process.nextTick</li>
+<li><strong>Microtasks</strong> queue - другие микрозадачи такие как колбеки завершенных промисов</li>
+</ul>
+<p>После каждой фазы основного цикла выполняются эти внутренние очереди - сначала очередь next ticks, пока она не окажется пустой, а затем и очередь остальных микрозадач, пока и она не останется пустой.</p>
+<p>Если во время выполнения очереди next ticks будут добавлены еще события в очередь next ticks, то они тоже будут выполнены до перехода к другим очередям, это может вызвать IO стагнацию - когда очередь событий наполняется быстрее чем обрабатывается и NodeJS просто не приступит к обработке других очередей событий</p>
+<p>Перевод <a href="https://blog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810">https://blog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Автор</span>
+    <span class="item-content">Arswarog</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">Обновлено</span>
+    <span class="item-content">
+        8 июня 2021
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/lamp/">
+            <span class="next-text nav-default">LAMP сервер для разработки (без PHP на хосте)</span>
+            <span class="next-text nav-mobile">Следующий пост</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:arswarog@yandex.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://linkedin.com/in/arswarog" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/arswarog" class="iconfont icon-github" title="github"></a>
+  <a href="https://arswarog.ru/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Arswarog</span>
+  </span>
+
+  <span class="copyright-year">
+<a href="https://metrika.yandex.ru/stat/?id=67573021&amp;from=informer"
+   target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/67573021/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                       style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" /></a>
+
+
+
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(67573021, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/67573021" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.7dc910f3.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
