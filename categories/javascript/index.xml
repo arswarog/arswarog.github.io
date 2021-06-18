@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Arswarog.ru - Еще один блог разработчика</title>
+    <link>https://arswarog.ru/categories/javascript/</link>
+    <description>Recent content in javascript on Arswarog.ru - Еще один блог разработчика</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Tue, 08 Jun 2021 06:41:57 +0300</lastBuildDate>
+    
+	<atom:link href="https://arswarog.ru/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Event Loop NodeJS: Part 1</title>
+      <link>https://arswarog.ru/post/event-loop-nodejs-p1/</link>
+      <pubDate>Tue, 08 Jun 2021 06:41:57 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/post/event-loop-nodejs-p1/</guid>
+      <description>Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка.</description>
+    </item>
+    
+  </channel>
+</rss>

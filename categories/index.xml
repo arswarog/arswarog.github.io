@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Arswarog.ru - Еще один блог разработчика</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 17 Jul 2020 10:13:05 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jun 2021 06:41:57 +0300</lastBuildDate>
     
 	<atom:link href="https://arswarog.ru/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript</title>
+      <link>https://arswarog.ru/categories/javascript/</link>
+      <pubDate>Tue, 08 Jun 2021 06:41:57 +0300</pubDate>
+      
+      <guid>https://arswarog.ru/categories/javascript/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>devops</title>
