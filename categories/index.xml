@@ -1,87 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Arswarog.ru - Еще один блог разработчика</title>
-    <link>https://arswarog.ru/categories/</link>
-    <description>Recent content in Categories on Arswarog.ru - Еще один блог разработчика</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru</language>
-    <lastBuildDate>Tue, 08 Jun 2021 06:41:57 +0300</lastBuildDate>
-    
-	<atom:link href="https://arswarog.ru/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>javascript</title>
-      <link>https://arswarog.ru/categories/javascript/</link>
-      <pubDate>Tue, 08 Jun 2021 06:41:57 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>devops</title>
-      <link>https://arswarog.ru/categories/devops/</link>
-      <pubDate>Fri, 17 Jul 2020 10:13:05 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>angular</title>
-      <link>https://arswarog.ru/categories/angular/</link>
-      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/angular/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>another</title>
-      <link>https://arswarog.ru/categories/another/</link>
-      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/another/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tools</title>
-      <link>https://arswarog.ru/categories/tools/</link>
-      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>theory</title>
-      <link>https://arswarog.ru/categories/theory/</link>
-      <pubDate>Thu, 05 Dec 2019 20:47:39 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/theory/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://arswarog.ru/categories/python/</link>
-      <pubDate>Mon, 30 Jul 2018 22:26:12 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>https://arswarog.ru/categories/react/</link>
-      <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/categories/react/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Categories on Arswarog.ru - Еще один блог разработчика</title>
+		<link>https://arswarog.ru/categories/</link>
+		<description>Recent content in Categories on Arswarog.ru - Еще один блог разработчика</description>
+		<generator>Hugo</generator>
+		<language>ru</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 08 Jun 2021 06:41:57 +0300</lastBuildDate>
+		
+			<atom:link href="https://arswarog.ru/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Javascript</title>
+				<link>https://arswarog.ru/categories/javascript/</link>
+				<pubDate>Tue, 08 Jun 2021 06:41:57 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/javascript/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Devops</title>
+				<link>https://arswarog.ru/categories/devops/</link>
+				<pubDate>Fri, 17 Jul 2020 10:13:05 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/devops/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Angular</title>
+				<link>https://arswarog.ru/categories/angular/</link>
+				<pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/angular/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Another</title>
+				<link>https://arswarog.ru/categories/another/</link>
+				<pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/another/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tools</title>
+				<link>https://arswarog.ru/categories/tools/</link>
+				<pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/tools/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Theory</title>
+				<link>https://arswarog.ru/categories/theory/</link>
+				<pubDate>Thu, 05 Dec 2019 20:47:39 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/theory/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Python</title>
+				<link>https://arswarog.ru/categories/python/</link>
+				<pubDate>Mon, 30 Jul 2018 22:26:12 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/python/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>React</title>
+				<link>https://arswarog.ru/categories/react/</link>
+				<pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
+				<guid>https://arswarog.ru/categories/react/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

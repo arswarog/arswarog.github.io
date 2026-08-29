@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Arswarog" /><meta name="description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
-Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка." /><meta name="keywords" content="Hugo, theme, even" />
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка.
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.74.2 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://arswarog.ru/post/event-loop-nodejs-p1/" />
@@ -39,26 +40,28 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Event Loop NodeJS: Part 1" />
-<meta property="og:description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
-Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://arswarog.ru/post/event-loop-nodejs-p1/" />
-<meta property="article:published_time" content="2021-06-08T06:41:57+03:00" />
-<meta property="article:modified_time" content="2021-06-08T06:41:57+03:00" />
-<meta itemprop="name" content="Event Loop NodeJS: Part 1">
-<meta itemprop="description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+<meta property="og:url" content="https://arswarog.ru/post/event-loop-nodejs-p1/">
+	<meta property="og:site_name" content="Arswarog.ru - Еще один блог разработчика">
+	<meta property="og:title" content="Event Loop NodeJS: Part 1">
+	<meta property="og:description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
 Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка.">
-<meta itemprop="datePublished" content="2021-06-08T06:41:57&#43;03:00" />
-<meta itemprop="dateModified" content="2021-06-08T06:41:57&#43;03:00" />
-<meta itemprop="wordCount" content="468">
+	<meta property="og:locale" content="ru">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2021-06-08T06:41:57+03:00">
+		<meta property="article:modified_time" content="2021-06-08T06:41:57+03:00">
 
-
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Event Loop NodeJS: Part 1"/>
-<meta name="twitter:description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
-Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка."/>
+	<meta itemprop="name" content="Event Loop NodeJS: Part 1">
+	<meta itemprop="description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка.">
+	<meta itemprop="datePublished" content="2021-06-08T06:41:57+03:00">
+	<meta itemprop="dateModified" content="2021-06-08T06:41:57+03:00">
+	<meta itemprop="wordCount" content="468">
+	<meta itemprop="keywords" content="Javascript">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Event Loop NodeJS: Part 1">
+	<meta name="twitter:description" content="Event Loop NodeJS NodeJS отличается от других платформ тем, как обрабатываются события ввода/вывода, или проще I/O. NodeJS рекламируют как “Не блокирующая, событийно управляемая платформа на базе движка JavaScript V8” (да, именно от V-образного 8-цилиндрового двигателя название и было взято).
+Что все это значит? Что значит “не блокирующий” и “событийно управляемый”? Ответы на все эти вопросы лежат в основе ядра NodeJS - цикле событий (Event Loop). Это первая статья из серии где будет объяснено что такое Event Loop, как он работает и как это влияет на разработка.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -249,7 +252,7 @@
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

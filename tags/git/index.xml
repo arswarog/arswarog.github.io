@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>git on Arswarog.ru - Еще один блог разработчика</title>
-    <link>https://arswarog.ru/tags/git/</link>
-    <description>Recent content in git on Arswarog.ru - Еще один блог разработчика</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru</language>
-    <lastBuildDate>Sun, 04 Nov 2018 22:00:12 +0300</lastBuildDate>
-    
-	<atom:link href="https://arswarog.ru/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Алиасы в git</title>
-      <link>https://arswarog.ru/post/git-aliases/</link>
-      <pubDate>Sun, 04 Nov 2018 22:00:12 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/git-aliases/</guid>
-      <description>В GIT есть очень удобная функциональность для создания кратких команд:
-1  git config --global alias.имя_алиаса команда   Например, очень удобная команда:
-1  git log --oneline --graph   Создающая вывод в терминале всего дерева коммитов Очень удобно сделать сокращение такой команды
-1  git l   для этого надо выполнить
-1  git config --global alias.l log --oneline --graph   или улучшенный вариант
-1  git config --global alias.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Git on Arswarog.ru - Еще один блог разработчика</title>
+		<link>https://arswarog.ru/tags/git/</link>
+		<description>Recent content in Git on Arswarog.ru - Еще один блог разработчика</description>
+		<generator>Hugo</generator>
+		<language>ru</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 04 Nov 2018 22:00:12 +0300</lastBuildDate>
+		
+			<atom:link href="https://arswarog.ru/tags/git/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Алиасы в git</title>
+				<link>https://arswarog.ru/post/git-aliases/</link>
+				<pubDate>Sun, 04 Nov 2018 22:00:12 +0300</pubDate>
+				<guid>https://arswarog.ru/post/git-aliases/</guid>
+				<description>&lt;p&gt;В GIT есть очень удобная функциональность для создания кратких команд:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global alias.имя_алиаса команда&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;Например, очень удобная команда:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git log --oneline --graph&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;Создающая вывод в терминале всего дерева коммитов&#xA;&lt;img src=&#34;https://arswarog.ru/git-aliases-1.png&#34; alt=&#34;Git log as a tree&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Очень удобно сделать сокращение такой команды&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git l&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;для этого надо выполнить&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global alias.l log --oneline --graph&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;или улучшенный вариант&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global alias.l log --oneline --graph --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s1&#34;&gt;&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) &amp;lt;%an&amp;gt;%Creset&amp;#39;&lt;/span&gt; --abbrev-commit&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;выдающий такой результат&#xA;&lt;img src=&#34;https://arswarog.ru/git-aliases-2.png&#34; alt=&#34;Git log as a tree with details&#34;&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

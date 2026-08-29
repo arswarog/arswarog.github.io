@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>theory on Arswarog.ru - Еще один блог разработчика</title>
-    <link>https://arswarog.ru/categories/theory/</link>
-    <description>Recent content in theory on Arswarog.ru - Еще один блог разработчика</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru</language>
-    <lastBuildDate>Thu, 05 Dec 2019 20:47:39 +0300</lastBuildDate>
-    
-	<atom:link href="https://arswarog.ru/categories/theory/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Паттерны проектирования</title>
-      <link>https://arswarog.ru/post/patterns/</link>
-      <pubDate>Thu, 05 Dec 2019 20:47:39 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/patterns/</guid>
-      <description>Паттерны проектирования или шаблоны проектирования — это типичные способы решения некоторых типичных проблем.
-Википедия описывает их следующим образом:
- Шаблон проектирования, или паттерн, в разработке программного обеспечения — повторяемая архитектурная конструкция, представляющая собой решение проблемы проектирования, в рамках некоторого часто возникающего контекста.
- Не стоит преувеличивать значение паттернов и применять везде и в обязательном порядке. Однако и приуменьшать их значение тоже не стоит. Это методы решение частых задач и эти методы являются опытом других разработчиков.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Theory on Arswarog.ru - Еще один блог разработчика</title>
+		<link>https://arswarog.ru/categories/theory/</link>
+		<description>Recent content in Theory on Arswarog.ru - Еще один блог разработчика</description>
+		<generator>Hugo</generator>
+		<language>ru</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 05 Dec 2019 20:47:39 +0300</lastBuildDate>
+		
+			<atom:link href="https://arswarog.ru/categories/theory/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Паттерны проектирования</title>
+				<link>https://arswarog.ru/post/patterns/</link>
+				<pubDate>Thu, 05 Dec 2019 20:47:39 +0300</pubDate>
+				<guid>https://arswarog.ru/post/patterns/</guid>
+				<description>&lt;p&gt;Паттерны проектирования или шаблоны проектирования — это типичные способы решения некоторых типичных проблем.&lt;/p&gt;&#xA;&lt;p&gt;Википедия &lt;a href=&#34;https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F&#34;&gt;описывает&lt;/a&gt; их следующим образом:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Шаблон проектирования, или паттерн, в разработке программного обеспечения — повторяемая архитектурная конструкция, представляющая собой решение проблемы проектирования, в рамках некоторого часто возникающего контекста.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Не стоит преувеличивать значение паттернов и применять везде и в обязательном порядке. Однако и приуменьшать их значение тоже не стоит. Это методы решение частых задач и эти методы являются опытом других разработчиков.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

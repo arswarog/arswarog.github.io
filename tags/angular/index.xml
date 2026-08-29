@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>angular on Arswarog.ru - Еще один блог разработчика</title>
-    <link>https://arswarog.ru/tags/angular/</link>
-    <description>Recent content in angular on Arswarog.ru - Еще один блог разработчика</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru</language>
-    <lastBuildDate>Wed, 29 Jan 2020 11:54:11 +0300</lastBuildDate>
-    
-	<atom:link href="https://arswarog.ru/tags/angular/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Монорепозиторий с Lerna для Angular</title>
-      <link>https://arswarog.ru/post/lerna-angular/</link>
-      <pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/lerna-angular/</guid>
-      <description>Последовательность действий Создаем приложение для ng new monorepo --createApplication=false
-npx lerna init
-ng g lib first
-Изменим путь где lerna будет искать пакеты на путь где angular хранит свои проекты
-1 2 3 4 5 6  { &amp;#34;packages&amp;#34;: [ &amp;#34;projects/*&amp;#34; ], ... }   Теперь папку packages, автоматически созданную lerna, можно удалить rm -r packages
-И создадим пару библиотек ng g lib first ng g lib second
-Если требуется, меняем имена пакетов в библиотеках</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Angular on Arswarog.ru - Еще один блог разработчика</title>
+		<link>https://arswarog.ru/tags/angular/</link>
+		<description>Recent content in Angular on Arswarog.ru - Еще один блог разработчика</description>
+		<generator>Hugo</generator>
+		<language>ru</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 29 Jan 2020 11:54:11 +0300</lastBuildDate>
+		
+			<atom:link href="https://arswarog.ru/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Монорепозиторий с Lerna для Angular</title>
+				<link>https://arswarog.ru/post/lerna-angular/</link>
+				<pubDate>Wed, 29 Jan 2020 11:54:11 +0300</pubDate>
+				<guid>https://arswarog.ru/post/lerna-angular/</guid>
+				<description>&lt;h2 id=&#34;последовательность-действий&#34;&gt;Последовательность действий&lt;/h2&gt;&#xA;&lt;p&gt;Создаем приложение для&#xA;&lt;code&gt;ng new monorepo --createApplication=false&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;npx lerna init&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;ng g lib first&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Изменим путь где lerna будет искать пакеты на путь где angular хранит свои проекты&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;packages&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;projects/*&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;Теперь папку packages, автоматически созданную lerna, можно удалить&#xA;&lt;code&gt;rm -r packages&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;И создадим пару библиотек&#xA;&lt;code&gt;ng g lib first&lt;/code&gt;&#xA;&lt;code&gt;ng g lib second&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Если требуется, меняем имена пакетов в библиотеках&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

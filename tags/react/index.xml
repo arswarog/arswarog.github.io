@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>react on Arswarog.ru - Еще один блог разработчика</title>
-    <link>https://arswarog.ru/tags/react/</link>
-    <description>Recent content in react on Arswarog.ru - Еще один блог разработчика</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru</language>
-    <lastBuildDate>Mon, 25 Jun 2018 19:57:11 +0300</lastBuildDate>
-    
-	<atom:link href="https://arswarog.ru/tags/react/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Использование React вместе с Typescript</title>
-      <link>https://arswarog.ru/post/react-typescript/</link>
-      <pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
-      
-      <guid>https://arswarog.ru/post/react-typescript/</guid>
-      <description>Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
-Стартовый шаблон Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
-Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>React on Arswarog.ru - Еще один блог разработчика</title>
+		<link>https://arswarog.ru/tags/react/</link>
+		<description>Recent content in React on Arswarog.ru - Еще один блог разработчика</description>
+		<generator>Hugo</generator>
+		<language>ru</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 25 Jun 2018 19:57:11 +0300</lastBuildDate>
+		
+			<atom:link href="https://arswarog.ru/tags/react/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Использование React вместе с Typescript</title>
+				<link>https://arswarog.ru/post/react-typescript/</link>
+				<pubDate>Mon, 25 Jun 2018 19:57:11 +0300</pubDate>
+				<guid>https://arswarog.ru/post/react-typescript/</guid>
+				<description>&lt;h2 id=&#34;использование-react-вместе-с-typescript&#34;&gt;Использование React вместе с TypeScript&lt;/h2&gt;&#xA;&lt;p&gt;TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.&lt;/p&gt;&#xA;&lt;h2 id=&#34;стартовый-шаблон&#34;&gt;Стартовый шаблон&lt;/h2&gt;&#xA;&lt;p&gt;Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.&lt;/p&gt;&#xA;&lt;p&gt;Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

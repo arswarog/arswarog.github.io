@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.2 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://arswarog.ru/" />
@@ -40,15 +40,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Arswarog.ru - Еще один блог разработчика" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://arswarog.ru/" />
-<meta property="og:updated_time" content="2021-06-08T06:41:57+03:00" />
-<meta itemprop="name" content="Arswarog.ru - Еще один блог разработчика">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Arswarog.ru - Еще один блог разработчика"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:url" content="https://arswarog.ru/">
+	<meta property="og:site_name" content="Arswarog.ru - Еще один блог разработчика">
+	<meta property="og:title" content="Arswarog.ru - Еще один блог разработчика">
+	<meta property="og:description" content="Hugo theme even example site.">
+	<meta property="og:locale" content="ru">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Arswarog.ru - Еще один блог разработчика">
+	<meta itemprop="description" content="Hugo theme even example site.">
+	<meta itemprop="datePublished" content="2026-08-03T12:00:00+03:00">
+	<meta itemprop="dateModified" content="2026-08-03T12:00:00+03:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Arswarog.ru - Еще один блог разработчика">
+	<meta name="twitter:description" content="Hugo theme even example site.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -131,12 +136,55 @@
   
   <div class="post-content">
     <div class="post-summary">
-      В GIT есть очень удобная функциональность для создания кратких команд:
-1  git config --global alias.имя_алиаса команда   Например, очень удобная команда:
-1  git log --oneline --graph   Создающая вывод в терминале всего дерева коммитов Очень удобно сделать сокращение такой команды
-1  git l   для этого надо выполнить
-1  git config --global alias.l log --oneline --graph   или улучшенный вариант
-1  git config --global alias.
+      <p>В GIT есть очень удобная функциональность для создания кратких команд:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global alias.имя_алиаса команда
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Например, очень удобная команда:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log --oneline --graph
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Создающая вывод в терминале всего дерева коммитов
+<img src="/git-aliases-1.png" alt="Git log as a tree"></p>
+<p>Очень удобно сделать сокращение такой команды</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git l
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>для этого надо выполнить</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global alias.l log --oneline --graph
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>или улучшенный вариант</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global alias.l log --oneline --graph --pretty<span class="o">=</span>format:<span class="s1">&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) &lt;%an&gt;%Creset&#39;</span> --abbrev-commit
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>выдающий такой результат
+<img src="/git-aliases-2.png" alt="Git log as a tree with details"></p>
     </div>
     <div class="read-more">
       <a href="/post/git-aliases/" class="read-more-link">Читать дальше...</a>
@@ -157,12 +205,14 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
-Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.
-И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
-И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
-Конец.
-Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.
+      <h2 id="начало">Начало</h2>
+<p>Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.</p>
+<p>Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.</p>
+<p>И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…</p>
+<p>И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.</p>
+<p>Конец.</p>
+<h2 id="прелюдия">Прелюдия</h2>
+<p>По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.</p>
     </div>
     <div class="read-more">
       <a href="/post/dunai/" class="read-more-link">Читать дальше...</a>
@@ -184,7 +234,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      На pythonworld.ru нашел отличную шпаргалку 
+      <p>На <a href="https://pythonworld.ru/">pythonworld.ru</a> нашел отличную шпаргалку
+<img src="/python-1.jpg" alt="Page 1">
+<img src="/python-2.jpg" alt="Page 2"></p>
     </div>
     <div class="read-more">
       <a href="/post/python/" class="read-more-link">Читать дальше...</a>
@@ -206,9 +258,20 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Бывают случаи, когда требуется сохранить вывод приложения в консоли со всеми плюшками, такими как цвет текста, жирный шрифт и т.д. Для таких случаев есть интересная программа, написанная на Cи — aha, так же доступная в AUR ArchLinux
-Просто перенаправляем ей вывод программы Например, сохраним в html справку самой программы:
-1  $ aha -h | aha &gt; out.html   Или настроим результат, добавим черный фон (--black) и включим использование таблицы стилей вместо inline стилей (-s)
+      <p>Бывают случаи, когда требуется сохранить вывод приложения в консоли со всеми плюшками, такими как цвет текста, жирный шрифт и т.д.
+Для таких случаев есть интересная программа, написанная на Cи — aha, так же доступная в AUR ArchLinux</p>
+<p>Просто перенаправляем ей вывод программы
+Например, сохраним в html справку самой программы:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ aha -h <span class="p">|</span> aha &gt; out.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/aha-1.png" alt="Results"></p>
+<p>Или настроим результат, добавим черный фон (<code>--black</code>) и включим использование таблицы стилей вместо inline стилей (<code>-s</code>)</p>
     </div>
     <div class="read-more">
       <a href="/post/aha/" class="read-more-link">Читать дальше...</a>
@@ -229,9 +292,11 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Использование React вместе с TypeScript TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.
-Стартовый шаблон Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.
-Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.
+      <h2 id="использование-react-вместе-с-typescript">Использование React вместе с TypeScript</h2>
+<p>TypeScript замечательный язык, по моему мнению, это будущее JavaScript. И хотя приходится больше писать кода, типизация, подсказки статический анализ типов — это огромные помощники программисту, особенно в больших проектах.</p>
+<h2 id="стартовый-шаблон">Стартовый шаблон</h2>
+<p>Для быстрого создания React + TypeScript Microsoft подготовила хороший инструмент, который работает вместе с привычным react-scripts, автоматически настраивает тестовое окружение и создает шаблон теста.</p>
+<p>Так же TypeScript нативно понимает JSX, без каких-либо надстроек, что не может не радовать.</p>
     </div>
     <div class="read-more">
       <a href="/post/react-typescript/" class="read-more-link">Читать дальше...</a>
@@ -277,7 +342,7 @@
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

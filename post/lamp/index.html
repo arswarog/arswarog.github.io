@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Arswarog" /><meta name="description" content="В этой статье я расскажу как можно быстро поднять связку PHP &#43; MySql используя Docker на компьютере без установки чего-либо на хост (docker, конечно, уже должен быть установлен)
-Требования  легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP  В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)" /><meta name="keywords" content="Hugo, theme, even" />
+Требования легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.74.2 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://arswarog.ru/post/lamp/" />
@@ -39,26 +40,32 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="LAMP сервер для разработки (без PHP на хосте)" />
-<meta property="og:description" content="В этой статье я расскажу как можно быстро поднять связку PHP &#43; MySql используя Docker на компьютере без установки чего-либо на хост (docker, конечно, уже должен быть установлен)
-Требования  легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP  В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://arswarog.ru/post/lamp/" />
-<meta property="article:published_time" content="2020-07-17T10:13:05+03:00" />
-<meta property="article:modified_time" content="2020-07-17T10:13:05+03:00" />
-<meta itemprop="name" content="LAMP сервер для разработки (без PHP на хосте)">
-<meta itemprop="description" content="В этой статье я расскажу как можно быстро поднять связку PHP &#43; MySql используя Docker на компьютере без установки чего-либо на хост (docker, конечно, уже должен быть установлен)
-Требования  легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP  В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)">
-<meta itemprop="datePublished" content="2020-07-17T10:13:05&#43;03:00" />
-<meta itemprop="dateModified" content="2020-07-17T10:13:05&#43;03:00" />
-<meta itemprop="wordCount" content="1571">
+<meta property="og:url" content="https://arswarog.ru/post/lamp/">
+	<meta property="og:site_name" content="Arswarog.ru - Еще один блог разработчика">
+	<meta property="og:title" content="LAMP сервер для разработки (без PHP на хосте)">
+	<meta property="og:description" content="В этой статье я расскажу как можно быстро поднять связку PHP &#43; MySql используя Docker на компьютере без установки чего-либо на хост (docker, конечно, уже должен быть установлен)
+Требования легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)">
+	<meta property="og:locale" content="ru">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2020-07-17T10:13:05+03:00">
+		<meta property="article:modified_time" content="2020-07-17T10:13:05+03:00">
+		<meta property="article:tag" content="Devops">
+		<meta property="article:tag" content="Lamp">
+		<meta property="article:tag" content="Systemd">
+		<meta property="article:tag" content="Docker">
 
-
-
-<meta itemprop="keywords" content="devops,lamp,systemd,docker," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="LAMP сервер для разработки (без PHP на хосте)"/>
-<meta name="twitter:description" content="В этой статье я расскажу как можно быстро поднять связку PHP &#43; MySql используя Docker на компьютере без установки чего-либо на хост (docker, конечно, уже должен быть установлен)
-Требования  легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP  В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)"/>
+	<meta itemprop="name" content="LAMP сервер для разработки (без PHP на хосте)">
+	<meta itemprop="description" content="В этой статье я расскажу как можно быстро поднять связку PHP &#43; MySql используя Docker на компьютере без установки чего-либо на хост (docker, конечно, уже должен быть установлен)
+Требования легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)">
+	<meta itemprop="datePublished" content="2020-07-17T10:13:05+03:00">
+	<meta itemprop="dateModified" content="2020-07-17T10:13:05+03:00">
+	<meta itemprop="wordCount" content="1634">
+	<meta itemprop="keywords" content="Devops,Lamp,Systemd,Docker">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="LAMP сервер для разработки (без PHP на хосте)">
+	<meta name="twitter:description" content="В этой статье я расскажу как можно быстро поднять связку PHP &#43; MySql используя Docker на компьютере без установки чего-либо на хост (docker, конечно, уже должен быть установлен)
+Требования легкость в использовании возможность запуска нескольких сайтов легкость развертывания нового сайта общий сервер базы данных для всех сайтов запуск одной строкой доступ к исходному коду сайта возможность использования разных версий PHP В результате потребуется запустить общие для всех сайтов сервисы (это можно поставить в автозапуск)">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -191,19 +198,19 @@
 В нашем случае, к ним будут подключаться сайты.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">proxy</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">driver</span><span class="p">:</span><span class="w"> </span>bridge<span class="w">
-</span><span class="w">  </span><span class="k">lamp</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">driver</span><span class="p">:</span><span class="w"> </span>bridge<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lamp</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Контейнер разрабатываемого сайта должен иметь открытый 80 порт и уметь отдавать HTML страницы.
 Так же он должен быть добавлен в сеть <strong>proxy</strong> что бы nginx-proxy мог получить доступ к контейнеру к которому проксирует трафик.</p>
@@ -219,7 +226,7 @@
 <p>Так же добавим доступ к сети <strong>proxy</strong>, внутри которой он и будет проксировать.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -230,23 +237,23 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">proxy</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>jwilder/nginx-proxy<span class="w">
-</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="m">80</span><span class="p">:</span><span class="m">80</span><span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- /var/run/docker.sock<span class="p">:</span>/tmp/docker.sock<span class="p">:</span>ro<span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- proxy<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">jwilder/nginx-proxy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">80</span><span class="p">:</span><span class="m">80</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/var/run/docker.sock:/tmp/docker.sock:ro</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">proxy</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="mysql">MySql</h3>
 <p>Используем <a href="https://hub.docker.com/_/mysql">готовый образ MySql</a>, можно выбрать необходимую версию.</p>
 <p>Я буду использовать последнюю версию</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -257,16 +264,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">mysql</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mysql<span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- ./data/mysql/data<span class="p">:</span>/var/lib/mysql<span class="w">
-</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span>root<span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- lamp<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mysql</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data/mysql/data:/var/lib/mysql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">lamp</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>В этой конфигурации я указал рутовый пароль базы данных используя переменную окружения <code>MYSQL_ROOT_PASSWORD</code>
 и папку, где будут храниться сами данные.
@@ -275,7 +282,7 @@
 <p>Так же используем <a href="https://hub.docker.com/r/phpmyadmin/phpmyadmin">готовый образ PhpMyAdmin</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -288,18 +295,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">phpmyadmin</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>phpmyadmin/phpmyadmin<span class="p">:</span>latest<span class="w">
-</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- VIRTUAL_HOST=phpmyadmin.local<span class="w">
-</span><span class="w">      </span>- PMA_HOST=mysql<span class="w">
-</span><span class="w">      </span>- PMA_USER=root<span class="w">
-</span><span class="w">      </span>- PMA_PASSWORD=root<span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- proxy<span class="w">
-</span><span class="w">      </span>- lamp<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">phpmyadmin</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">phpmyadmin/phpmyadmin:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">VIRTUAL_HOST=phpmyadmin.local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PMA_HOST=mysql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PMA_USER=root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PMA_PASSWORD=root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">proxy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">lamp</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>В переменной окружения <code>VIRTUAL_HOST</code> указываем домен, по которому будет доступен PhpMyAdmin. Это требуется что бы nginx-proxy
 перенаправил запрос к этому домену к этому контейнеру</p>
@@ -311,7 +318,7 @@
 <p>Все необходимые файлы для образа поместим в папку php, в ней же создадим файл <code>Dockerfile</code> с инструкциями по сборке, например такими:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -326,37 +333,37 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dockerfile" data-lang="Dockerfile"><span class="k">FROM</span><span class="s"> php:7.3.2-fpm</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y <span class="se">\
-</span><span class="se"></span>        libzip-dev <span class="se">\
-</span><span class="se"></span>        zip <span class="se">\
-</span><span class="se"></span>	<span class="o">&amp;&amp;</span> docker-php-ext-configure zip --with-libzip <span class="se">\
-</span><span class="se"></span>	<span class="o">&amp;&amp;</span> docker-php-ext-install zip <span class="se">\
-</span><span class="se"></span>	<span class="o">&amp;&amp;</span> docker-php-ext-install gd <span class="se">\
-</span><span class="se"></span>	<span class="o">&amp;&amp;</span> docker-php-ext-install mysqli<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">COPY</span> --from<span class="o">=</span>composer:latest /usr/bin/composer /usr/bin/composer<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /var/www/html</span><span class="err">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Dockerfile" data-lang="Dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="w"> </span><span class="s">php:7.3.2-fpm</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y <span class="se">\
+</span></span></span><span class="line"><span class="cl">        libzip-dev <span class="se">\
+</span></span></span><span class="line"><span class="cl">        zip <span class="se">\
+</span></span></span><span class="line"><span class="cl">	<span class="o">&amp;&amp;</span> docker-php-ext-configure zip --with-libzip <span class="se">\
+</span></span></span><span class="line"><span class="cl">	<span class="o">&amp;&amp;</span> docker-php-ext-install zip <span class="se">\
+</span></span></span><span class="line"><span class="cl">	<span class="o">&amp;&amp;</span> docker-php-ext-install gd <span class="se">\
+</span></span></span><span class="line"><span class="cl">	<span class="o">&amp;&amp;</span> docker-php-ext-install mysqli<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">COPY</span> --from<span class="o">=</span>composer:latest /usr/bin/composer /usr/bin/composer<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/var/www/html</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Так же я создал bash скрипт для сборки образа с нужным тегом:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> php
-touch build.sh
-chmod <span class="m">755</span> build.sh
-<span class="nb">echo</span> <span class="s2">&#34;#\!/bin/bash&#34;</span> &gt;&gt; build.sh
-<span class="nb">echo</span> <span class="s2">&#34;docker build . -t lamp-php&#34;</span> &gt;&gt; build.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> php
+</span></span><span class="line"><span class="cl">touch build.sh
+</span></span><span class="line"><span class="cl">chmod <span class="m">755</span> build.sh
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;#\!/bin/bash&#34;</span> &gt;&gt; build.sh
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;docker build . -t lamp-php&#34;</span> &gt;&gt; build.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Это дает возможность не вспоминать необходимое имя тега а просто выполнить скрипт с говорящим названием</p>
 <p>И сразу же соберем базовый образ выполнив этот скрипт</p>
@@ -369,24 +376,24 @@ chmod <span class="m">755</span> build.sh
 и вскоре на экране отобразится отчет о создании сетей и запуске контейнеров</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Creating network &#34;lamp_proxy&#34; with driver &#34;bridge&#34;
-Creating network &#34;lamp_lamp&#34; with driver &#34;bridge&#34;
-Creating lamp_mysql_1      ... done
-Creating lamp_proxy_1      ... done
-Creating lamp_phpmyadmin_1 ... done
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Creating network &#34;lamp_proxy&#34; with driver &#34;bridge&#34;
+</span></span><span class="line"><span class="cl">Creating network &#34;lamp_lamp&#34; with driver &#34;bridge&#34;
+</span></span><span class="line"><span class="cl">Creating lamp_mysql_1      ... done
+</span></span><span class="line"><span class="cl">Creating lamp_proxy_1      ... done
+</span></span><span class="line"><span class="cl">Creating lamp_phpmyadmin_1 ... done
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>А так же вывод работы контейнеров, который будет выглядеть примерно так:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -403,37 +410,37 @@ Creating lamp_phpmyadmin_1 ... done
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Attaching to lamp_mysql_1, lamp_proxy_1, lamp_phpmyadmin_1
-mysql_1       | 2020-07-17 09:20:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.21-1debian10 started.
-mysql_1       | 2020-07-17 09:20:54+00:00 [Note] [Entrypoint]: Switching to dedicated user &#39;mysql&#39;
-mysql_1       | 2020-07-17 09:20:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.21-1debian10 started.
-mysql_1       | 2020-07-17T09:20:54.840913Z 0 [Warning] [MY-011070] [Server] &#39;Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it&#39; is deprecated and will be removed in a future release.
-mysql_1       | 2020-07-17T09:20:54.841010Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.21) starting as process 1
-mysql_1       | 2020-07-17T09:20:54.849671Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-phpmyadmin_1  | AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 172.24.0.3. Set the &#39;ServerName&#39; directive globally to suppress this message
-phpmyadmin_1  | AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 172.24.0.3. Set the &#39;ServerName&#39; directive globally to suppress this message
-phpmyadmin_1  | [Fri Jul 17 09:20:55.484132 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.6 configured -- resuming normal operations
-phpmyadmin_1  | [Fri Jul 17 09:20:55.484179 2020] [core:notice] [pid 1] AH00094: Command line: &#39;apache2 -D FOREGROUND&#39;
-proxy_1       | WARNING: /etc/nginx/dhparam/dhparam.pem was not found. A pre-generated dhparam.pem will be used for now while a new one
-proxy_1       | is being generated in the background.  Once the new dhparam.pem is in place, nginx will be reloaded.
-proxy_1       | forego     | starting dockergen.1 on port 5000
-proxy_1       | forego     | starting nginx.1 on port 5100
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Attaching</span> <span class="n">to</span> <span class="n">lamp_mysql_1</span><span class="p">,</span> <span class="n">lamp_proxy_1</span><span class="p">,</span> <span class="n">lamp_phpmyadmin_1</span>
+</span></span><span class="line"><span class="cl"><span class="n">mysql_1</span>       <span class="o">|</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">17</span> <span class="mi">09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">54</span><span class="o">+</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="p">[</span><span class="n">Note</span><span class="p">]</span> <span class="p">[</span><span class="n">Entrypoint</span><span class="p">]:</span> <span class="n">Entrypoint</span> <span class="n">script</span> <span class="k">for</span> <span class="n">MySQL</span> <span class="n">Server</span> <span class="mf">8.0</span><span class="o">.</span><span class="mi">21</span><span class="o">-</span><span class="mi">1</span><span class="n">debian10</span> <span class="n">started</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">mysql_1</span>       <span class="o">|</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">17</span> <span class="mi">09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">54</span><span class="o">+</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="p">[</span><span class="n">Note</span><span class="p">]</span> <span class="p">[</span><span class="n">Entrypoint</span><span class="p">]:</span> <span class="n">Switching</span> <span class="n">to</span> <span class="n">dedicated</span> <span class="n">user</span> <span class="s1">&#39;mysql&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">mysql_1</span>       <span class="o">|</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">17</span> <span class="mi">09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">54</span><span class="o">+</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="p">[</span><span class="n">Note</span><span class="p">]</span> <span class="p">[</span><span class="n">Entrypoint</span><span class="p">]:</span> <span class="n">Entrypoint</span> <span class="n">script</span> <span class="k">for</span> <span class="n">MySQL</span> <span class="n">Server</span> <span class="mf">8.0</span><span class="o">.</span><span class="mi">21</span><span class="o">-</span><span class="mi">1</span><span class="n">debian10</span> <span class="n">started</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">mysql_1</span>       <span class="o">|</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">17</span><span class="n">T09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mf">54.840913</span><span class="n">Z</span> <span class="mi">0</span> <span class="p">[</span><span class="n">Warning</span><span class="p">]</span> <span class="p">[</span><span class="n">MY</span><span class="o">-</span><span class="mi">011070</span><span class="p">]</span> <span class="p">[</span><span class="n">Server</span><span class="p">]</span> <span class="s1">&#39;Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it&#39;</span> <span class="n">is</span> <span class="n">deprecated</span> <span class="ow">and</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">future</span> <span class="n">release</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">mysql_1</span>       <span class="o">|</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">17</span><span class="n">T09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mf">54.841010</span><span class="n">Z</span> <span class="mi">0</span> <span class="p">[</span><span class="n">System</span><span class="p">]</span> <span class="p">[</span><span class="n">MY</span><span class="o">-</span><span class="mi">010116</span><span class="p">]</span> <span class="p">[</span><span class="n">Server</span><span class="p">]</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">mysqld</span> <span class="p">(</span><span class="n">mysqld</span> <span class="mf">8.0</span><span class="o">.</span><span class="mi">21</span><span class="p">)</span> <span class="n">starting</span> <span class="n">as</span> <span class="n">process</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">mysql_1</span>       <span class="o">|</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">17</span><span class="n">T09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mf">54.849671</span><span class="n">Z</span> <span class="mi">1</span> <span class="p">[</span><span class="n">System</span><span class="p">]</span> <span class="p">[</span><span class="n">MY</span><span class="o">-</span><span class="mi">013576</span><span class="p">]</span> <span class="p">[</span><span class="n">InnoDB</span><span class="p">]</span> <span class="n">InnoDB</span> <span class="n">initialization</span> <span class="n">has</span> <span class="n">started</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">phpmyadmin_1</span>  <span class="o">|</span> <span class="n">AH00558</span><span class="p">:</span> <span class="n">apache2</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">reliably</span> <span class="n">determine</span> <span class="n">the</span> <span class="n">server</span><span class="s1">&#39;s fully qualified domain name, using 172.24.0.3. Set the &#39;</span><span class="n">ServerName</span><span class="s1">&#39; directive globally to suppress this message</span>
+</span></span><span class="line"><span class="cl"><span class="n">phpmyadmin_1</span>  <span class="o">|</span> <span class="n">AH00558</span><span class="p">:</span> <span class="n">apache2</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">reliably</span> <span class="n">determine</span> <span class="n">the</span> <span class="n">server</span><span class="s1">&#39;s fully qualified domain name, using 172.24.0.3. Set the &#39;</span><span class="n">ServerName</span><span class="s1">&#39; directive globally to suppress this message</span>
+</span></span><span class="line"><span class="cl"><span class="n">phpmyadmin_1</span>  <span class="o">|</span> <span class="p">[</span><span class="n">Fri</span> <span class="n">Jul</span> <span class="mi">17</span> <span class="mi">09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mf">55.484132</span> <span class="mi">2020</span><span class="p">]</span> <span class="p">[</span><span class="n">mpm_prefork</span><span class="p">:</span><span class="n">notice</span><span class="p">]</span> <span class="p">[</span><span class="n">pid</span> <span class="mi">1</span><span class="p">]</span> <span class="n">AH00163</span><span class="p">:</span> <span class="n">Apache</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">38</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span> <span class="n">PHP</span><span class="o">/</span><span class="mf">7.4</span><span class="o">.</span><span class="mi">6</span> <span class="n">configured</span> <span class="o">--</span> <span class="n">resuming</span> <span class="n">normal</span> <span class="n">operations</span>
+</span></span><span class="line"><span class="cl"><span class="n">phpmyadmin_1</span>  <span class="o">|</span> <span class="p">[</span><span class="n">Fri</span> <span class="n">Jul</span> <span class="mi">17</span> <span class="mi">09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mf">55.484179</span> <span class="mi">2020</span><span class="p">]</span> <span class="p">[</span><span class="n">core</span><span class="p">:</span><span class="n">notice</span><span class="p">]</span> <span class="p">[</span><span class="n">pid</span> <span class="mi">1</span><span class="p">]</span> <span class="n">AH00094</span><span class="p">:</span> <span class="n">Command</span> <span class="n">line</span><span class="p">:</span> <span class="s1">&#39;apache2 -D FOREGROUND&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">proxy_1</span>       <span class="o">|</span> <span class="n">WARNING</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">dhparam</span><span class="o">/</span><span class="n">dhparam</span><span class="o">.</span><span class="n">pem</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span> <span class="n">A</span> <span class="n">pre</span><span class="o">-</span><span class="n">generated</span> <span class="n">dhparam</span><span class="o">.</span><span class="n">pem</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="n">now</span> <span class="k">while</span> <span class="n">a</span> <span class="n">new</span> <span class="n">one</span>
+</span></span><span class="line"><span class="cl"><span class="n">proxy_1</span>       <span class="o">|</span> <span class="n">is</span> <span class="n">being</span> <span class="n">generated</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">background</span><span class="o">.</span>  <span class="n">Once</span> <span class="n">the</span> <span class="n">new</span> <span class="n">dhparam</span><span class="o">.</span><span class="n">pem</span> <span class="n">is</span> <span class="ow">in</span> <span class="n">place</span><span class="p">,</span> <span class="n">nginx</span> <span class="n">will</span> <span class="n">be</span> <span class="n">reloaded</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">proxy_1</span>       <span class="o">|</span> <span class="n">forego</span>     <span class="o">|</span> <span class="n">starting</span> <span class="n">dockergen</span><span class="o">.</span><span class="mi">1</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">5000</span>
+</span></span><span class="line"><span class="cl"><span class="n">proxy_1</span>       <span class="o">|</span> <span class="n">forego</span>     <span class="o">|</span> <span class="n">starting</span> <span class="n">nginx</span><span class="o">.</span><span class="mi">1</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">5100</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Посмотрим список запущенных контейнеров командой <code>docker ps</code> в другом терминале</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                 NAMES
-ff89f0056bf2        mysql:5.7                      &#34;docker-entrypoint.s…&#34;   25 hours ago        Up 22 seconds       3306/tcp, 33060/tcp   lamp_mysql_1
-3cd6df98ca07        jwilder/nginx-proxy            &#34;/app/docker-entrypo…&#34;   45 hours ago        Up 22 seconds       0.0.0.0:80-&gt;80/tcp    lamp_proxy_1
-b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#34;   45 hours ago        Up 22 seconds       80/tcp                lamp_phpmyadmin_1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                 NAMES
+</span></span><span class="line"><span class="cl">ff89f0056bf2        mysql:5.7                      &#34;docker-entrypoint.s…&#34;   25 hours ago        Up 22 seconds       3306/tcp, 33060/tcp   lamp_mysql_1
+</span></span><span class="line"><span class="cl">3cd6df98ca07        jwilder/nginx-proxy            &#34;/app/docker-entrypo…&#34;   45 hours ago        Up 22 seconds       0.0.0.0:80-&gt;80/tcp    lamp_proxy_1
+</span></span><span class="line"><span class="cl">b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#34;   45 hours ago        Up 22 seconds       80/tcp                lamp_phpmyadmin_1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>В списке должны быть все три контейнера, конечно же <code>CONTAINER ID</code> у них будет другой.</p>
 <p>Если хотя бы одного контейнера не хватает, потребуется искать в выводе команды <code>docker-compose up</code> ошибки, возникшие в этом контейнере.
@@ -463,7 +470,7 @@ b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#
 <p>Так же добавляем этот контейнер к сети, в которой работает nginx-proxy и бекенд этого сайта</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -478,20 +485,20 @@ b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">nginx</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>nginx<span class="w">
-</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- VIRTUAL_HOST=example.local<span class="w">
-</span><span class="w">    </span><span class="k">depends_on</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- php<span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- ./nginx/default.nginx<span class="p">:</span>/etc/nginx/conf.d/default.conf<span class="w">
-</span><span class="w">      </span>- ./html/<span class="p">:</span>/var/www/html/<span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- frontend<span class="w">
-</span><span class="w">      </span>- backend<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">nginx</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">VIRTUAL_HOST=example.local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">php</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./nginx/default.nginx:/etc/nginx/conf.d/default.conf</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./html/:/var/www/html/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">frontend</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">backend</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Согласно такой конфигурации, конфиг сайта должен находится в директории <code>nginx</code> и называться <code>default.nginx</code></p>
 <p>Пункт <code>depends_on</code> указывает что контейнер надо запустить после запуска указанных контейнеров. Если этого не сделать,
@@ -501,7 +508,7 @@ b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#
 <p>Подключим локальный <code>php.ini</code> из директории <code>php</code> и файлы проекта.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -512,16 +519,16 @@ b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">php</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>lamp-php<span class="p">:</span>latest<span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- ./php/php.ini<span class="p">:</span>/usr/local/etc/php/php.ini<span class="w">
-</span><span class="w">      </span>- ./html/<span class="p">:</span>/var/www/html/<span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- backend<span class="w">
-</span><span class="w">      </span>- lamp<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">php</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">lamp-php:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./php/php.ini:/usr/local/etc/php/php.ini</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./html/:/var/www/html/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">backend</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">lamp</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="автозапуск-через-systemd">Автозапуск через systemd</h2>
 <p>Создаем файл сервиса:</p>
@@ -532,7 +539,7 @@ b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#
 <p><code>sudo vim /etc/systemd/system/lamp.service</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -545,18 +552,18 @@ b4fe66dd1b1b        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
-Description=LAMP service
-After=docker.target
-
-[Service]
-WorkingDirectory=/srv/lamp
-Type=single
-ExecStart=/usr/bin/docker-compose up
-
-[Install]
-WantedBy=multi-user.target
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Unit]
+</span></span><span class="line"><span class="cl">Description=LAMP service
+</span></span><span class="line"><span class="cl">After=docker.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Service]
+</span></span><span class="line"><span class="cl">WorkingDirectory=/srv/lamp
+</span></span><span class="line"><span class="cl">Type=single
+</span></span><span class="line"><span class="cl">ExecStart=/usr/bin/docker-compose up
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Install]
+</span></span><span class="line"><span class="cl">WantedBy=multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>В файле сервиса указаны</p>
 <ul>
@@ -574,17 +581,17 @@ WantedBy=multi-user.target
 <p>Результат этой команды будет примерно таким:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                 NAMES
-408b01017fd5        mysql:5.7                      &#34;docker-entrypoint.s…&#34;   10 days ago         Up 30 minutes       3306/tcp, 33060/tcp   lamp_mysql_1
-0d19774097c7        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#34;   10 days ago         Up 30 minutes       80/tcp                lamp_phpmyadmin_1
-1cc5aaa40f9b        jwilder/nginx-proxy            &#34;/app/docker-entrypo…&#34;   10 days ago         Up 30 minutes       0.0.0.0:80-&gt;80/tcp    lamp_proxy_1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                 NAMES
+</span></span><span class="line"><span class="cl">408b01017fd5        mysql:5.7                      &#34;docker-entrypoint.s…&#34;   10 days ago         Up 30 minutes       3306/tcp, 33060/tcp   lamp_mysql_1
+</span></span><span class="line"><span class="cl">0d19774097c7        phpmyadmin/phpmyadmin:latest   &#34;/docker-entrypoint.…&#34;   10 days ago         Up 30 minutes       80/tcp                lamp_phpmyadmin_1
+</span></span><span class="line"><span class="cl">1cc5aaa40f9b        jwilder/nginx-proxy            &#34;/app/docker-entrypo…&#34;   10 days ago         Up 30 minutes       0.0.0.0:80-&gt;80/tcp    lamp_proxy_1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>По завершению работы LAMP сервис можно остановить:</p>
 <p><code>sudo systemctl stop lamp</code></p>
@@ -666,7 +673,7 @@ WantedBy=multi-user.target
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

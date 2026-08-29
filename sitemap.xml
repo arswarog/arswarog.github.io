@@ -3,7 +3,14 @@
   
   <url>
     <loc>https://arswarog.ru/</loc>
-    <lastmod>2021-06-08T06:41:57+03:00</lastmod>
+    <lastmod>2026-08-03T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://arswarog.ru/ME/</loc>
+    <lastmod>2026-08-03T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>https://arswarog.ru/tags/devops/</loc>
+    <loc>https://arswarog.ru/categories/devops/</loc>
     <lastmod>2020-07-17T10:13:05+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://arswarog.ru/categories/devops/</loc>
+    <loc>https://arswarog.ru/tags/devops/</loc>
     <lastmod>2020-07-17T10:13:05+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://arswarog.ru/tags/angular/</loc>
+    <loc>https://arswarog.ru/categories/angular/</loc>
     <lastmod>2020-01-29T11:54:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://arswarog.ru/categories/angular/</loc>
+    <loc>https://arswarog.ru/tags/angular/</loc>
     <lastmod>2020-01-29T11:54:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -184,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://arswarog.ru/tags/python/</loc>
+    <loc>https://arswarog.ru/categories/python/</loc>
     <lastmod>2018-07-30T22:26:12+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://arswarog.ru/categories/python/</loc>
+    <loc>https://arswarog.ru/tags/python/</loc>
     <lastmod>2018-07-30T22:26:12+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -219,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://arswarog.ru/tags/react/</loc>
+    <loc>https://arswarog.ru/categories/react/</loc>
     <lastmod>2018-06-25T19:57:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://arswarog.ru/categories/react/</loc>
+    <loc>https://arswarog.ru/tags/react/</loc>
     <lastmod>2018-06-25T19:57:11+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

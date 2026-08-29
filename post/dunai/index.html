@@ -21,14 +21,15 @@
 И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
 И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
 Конец.
-Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу." /><meta name="keywords" content="Hugo, theme, even" />
+Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.74.2 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://arswarog.ru/post/dunai/" />
@@ -43,38 +44,41 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Как я писал фреймворк Dunai" />
-<meta property="og:description" content="Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
-Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.
-И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
-И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
-Конец.
-Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://arswarog.ru/post/dunai/" />
-<meta property="article:published_time" content="2018-08-03T22:13:13+03:00" />
-<meta property="article:modified_time" content="2018-08-03T22:13:13+03:00" />
-<meta itemprop="name" content="Как я писал фреймворк Dunai">
-<meta itemprop="description" content="Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
+<meta property="og:url" content="https://arswarog.ru/post/dunai/">
+	<meta property="og:site_name" content="Arswarog.ru - Еще один блог разработчика">
+	<meta property="og:title" content="Как я писал фреймворк Dunai">
+	<meta property="og:description" content="Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
 Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.
 И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
 И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
 Конец.
 Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.">
-<meta itemprop="datePublished" content="2018-08-03T22:13:13&#43;03:00" />
-<meta itemprop="dateModified" content="2018-08-03T22:13:13&#43;03:00" />
-<meta itemprop="wordCount" content="591">
+	<meta property="og:locale" content="ru">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2018-08-03T22:13:13+03:00">
+		<meta property="article:modified_time" content="2018-08-03T22:13:13+03:00">
+		<meta property="article:tag" content="Nodejs">
 
-
-
-<meta itemprop="keywords" content="nodejs," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Как я писал фреймворк Dunai"/>
-<meta name="twitter:description" content="Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
+	<meta itemprop="name" content="Как я писал фреймворк Dunai">
+	<meta itemprop="description" content="Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
 Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.
 И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
 И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
 Конец.
-Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу."/>
+Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.">
+	<meta itemprop="datePublished" content="2018-08-03T22:13:13+03:00">
+	<meta itemprop="dateModified" content="2018-08-03T22:13:13+03:00">
+	<meta itemprop="wordCount" content="591">
+	<meta itemprop="keywords" content="Nodejs">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Как я писал фреймворк Dunai">
+	<meta name="twitter:description" content="Начало Давным давно, в далекой галактике, при использовании NodeJS джедаю стало сложно следить за кодом и зависимостями.
+Но он помнил, он видел магию автоматического внедрения зависимостей, так как был в клане Angular.
+И вот, молодой джедай, воодушевленный могуществом TypeScript решил познать черную магию декораторов, он хотел понять как эта магия работает…
+И пошел странствовать в поисках мудрости — пошел в гугл, попал на хабр, все узнал.
+Конец.
+Прелюдия По моему мнению на чистом JavaScript слишком неудобно писать сложные приложения, и TypeScript позволяет значительно упростить эту задачу.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -185,7 +189,7 @@
 <p>Быстро появилось представление, о том как можно упростить написание бекенда на ноде, в результате получилось довольно красивое описание класса приложения:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -212,32 +216,32 @@
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">@Application()
-export class App {
-    // Предварительная настройка
-    constructor(public server?: HttpServer,
-                public db?: MongoDB,
-                public service?: MyService) {
-        server.use(bodyParser.json());
-    }
-
-    // Подготовка правил роутинга
-    initRoutes() {
-        this.server.registerController(&#39;/some/&#39;, TestController);
-    }
-
-    // Запуск
-    async run(port: number) {
-        await this.server.listen(port);
-        console.log(`Server successfully started on ${port} port`);
-    }
-
-    // Завершение
-    stop() {
-        this.server.close();
-    }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">@</span><span class="n">Application</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="k">class</span> <span class="n">App</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">Предварительная</span> <span class="err">настройка</span>
+</span></span><span class="line"><span class="cl">    <span class="n">constructor</span><span class="p">(</span><span class="n">public</span> <span class="n">server</span><span class="err">?</span><span class="p">:</span> <span class="n">HttpServer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">public</span> <span class="n">db</span><span class="err">?</span><span class="p">:</span> <span class="n">MongoDB</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">public</span> <span class="n">service</span><span class="err">?</span><span class="p">:</span> <span class="n">MyService</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">server</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">bodyParser</span><span class="o">.</span><span class="n">json</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">Подготовка</span> <span class="err">правил</span> <span class="err">роутинга</span>
+</span></span><span class="line"><span class="cl">    <span class="n">initRoutes</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">registerController</span><span class="p">(</span><span class="s1">&#39;/some/&#39;</span><span class="p">,</span> <span class="n">TestController</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">Запуск</span>
+</span></span><span class="line"><span class="cl">    <span class="n">async</span> <span class="n">run</span><span class="p">(</span><span class="n">port</span><span class="p">:</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">await</span> <span class="n">this</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="n">port</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">Server</span> <span class="n">successfully</span> <span class="n">started</span> <span class="n">on</span> <span class="o">$</span><span class="p">{</span><span class="n">port</span><span class="p">}</span> <span class="n">port</span><span class="err">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">Завершение</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Dependency Injection через конструктор, для упрощения тестирования. Минусом является то, что в конструкторе не укажешь интерфейс, а если и укажешь то надо будет явно указывать зависимость, поэтому в тестах приходилось некоторые тестовым зависимостям некрасиво явно присваивать тип any
 настройка роутинга и контроллеров в классе приложения а не в самом контроллере. Все роуты подключаются в одном месте, что позволяет легко найти нужный контроллер любого роута или поменять пути
@@ -245,24 +249,24 @@ export class App {
 <p>В результате стартовый скрипт выглядел довольно просто</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">App</span><span class="p">();</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">&#39;mongodb://user:pwd@mongo:27017/dbname&#39;</span><span class="p">);</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">initRoutes</span><span class="p">();</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="mi">80</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">App</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">&#39;mongodb://user:pwd@mongo:27017/dbname&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">initRoutes</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="mi">80</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Собственно даже комментировать нечего. В дальнейшем, подключение к базе данных лучше выполнять в async методе класса Application.</p>
 <h2 id="контроллер">Контроллер</h2>
 <p>Практически всегда разные группы обработчиков запросов клиентов имеют общую кодовую базу и общие зависимости, поэтому логично объединить их в один класс, и через декоратор прописать детали:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -282,27 +286,27 @@ export class App {
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Controller</span><span class="p">()</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">TestController</span> <span class="p">{</span>
-    <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">service</span>: <span class="kt">MyService</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
-
-    <span class="kd">@Action</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span>
-    <span class="nx">actionIndex</span><span class="p">(</span><span class="nx">req</span>: <span class="kt">express.Request</span><span class="p">,</span> <span class="nx">res</span>: <span class="kt">express.Response</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span>
-            <span class="nx">action</span><span class="o">:</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span>
-        <span class="p">});</span>
-    <span class="p">}</span>
-
-    <span class="kd">@Action</span><span class="p">([</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;post&#39;</span><span class="p">],</span> <span class="s1">&#39;/view&#39;</span><span class="p">)</span>
-    <span class="nx">actionView</span><span class="p">(</span><span class="nx">req</span>: <span class="kt">express.Request</span><span class="p">,</span> <span class="nx">res</span>: <span class="kt">express.Response</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span>
-            <span class="nx">action</span><span class="o">:</span> <span class="s1">&#39;view&#39;</span><span class="p">,</span>
-        <span class="p">});</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">@Controller</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">TestController</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">service</span>: <span class="kt">MyService</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">@Action</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">actionIndex</span><span class="p">(</span><span class="nx">req</span>: <span class="kt">express.Request</span><span class="p">,</span> <span class="nx">res</span>: <span class="kt">express.Response</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">action</span><span class="o">:</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">@Action</span><span class="p">([</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;post&#39;</span><span class="p">],</span> <span class="s1">&#39;/view&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">actionView</span><span class="p">(</span><span class="nx">req</span>: <span class="kt">express.Request</span><span class="p">,</span> <span class="nx">res</span>: <span class="kt">express.Response</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">action</span><span class="o">:</span> <span class="s1">&#39;view&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>Учитывая строку this.server.registerController('/&rsquo;, TestController); такое приложение будет обрабатывать следующие пути:</p>
+</div><p>Учитывая строку this.server.registerController(&rsquo;/&rsquo;, TestController); такое приложение будет обрабатывать следующие пути:</p>
 <p><code>GET /some/</code></p>
 <p><code>GET /some/view</code></p>
 <p><code>POST /some/view</code></p>
@@ -311,7 +315,7 @@ export class App {
 <p>Сервисы я хотел что бы были тоже с автоматическим внедрением зависимостей (да, да, опыт разработки на Angular сказывается):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -321,15 +325,15 @@ export class App {
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Service</span><span class="p">()</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">MyService</span> <span class="p">{</span>
-    <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">http</span>: <span class="kt">HttpClient</span><span class="p">)</span> <span class="p">{}</span>
-
-    <span class="nx">async</span> <span class="nx">getContent</span><span class="p">(</span><span class="nx">url</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">@Service</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">MyService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">http</span>: <span class="kt">HttpClient</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">async</span> <span class="nx">getContent</span><span class="p">(</span><span class="nx">url</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="темная-сторона-силы">Темная сторона силы</h2>
 <p>Нормального способа разрешать циклические зависимости я не нашел, однако циклические зависимости — антипаттерн так что это особо и не требуется.</p>
@@ -337,7 +341,7 @@ export class App {
 <p>Для работы фреймворка требуются некоторый настройки в tsconfig.json</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -346,14 +350,14 @@ export class App {
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;ES5&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;experimentalDecorators&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;emitDecoratorMetadata&#34;</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;ES5&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;experimentalDecorators&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;emitDecoratorMetadata&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Декораторы работают иначе если компилировать в ES3 и ниже, поэтому в опциях компилятора target требуется указывать не ниже ES5.</p>
 <p>Также для работы фреймворка требуются Reflect.</p>
@@ -426,7 +430,7 @@ export class App {
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
